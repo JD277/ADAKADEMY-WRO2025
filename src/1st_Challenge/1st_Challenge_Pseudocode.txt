@@ -1,0 +1,29 @@
+START
+INT left_distance = 0
+INT right_distance = 0
+BOOL button_is_pressed = FALSE
+BOOL start = FALSE
+
+
+IF button_is_pressed THEN
+    start = true
+END IF
+
+WHILE start == true THEN
+    GOFORWARD()
+
+
+    IF left_distance - right_distance <= 36  THEN
+        IF left_distance > right_distance THEN
+            GOLEFT()
+        ELSE IF left_distance < right_distance THEN
+            GORIGHT()
+        END IF
+    END IF
+
+
+    IF section_counter >= 12 THEN
+    STOP()
+    END IF
+
+END WHILE
