@@ -5,6 +5,12 @@ IN_4 = 4
 ENB = 5 #ENABLE
 SERVO_PIN = 6
 
+
+
+
+CAMERA_X_RESOLUTION = 640
+CAMERA_Y_RESOLUTION = 480
+
 # Color masks for detecting obstacles
 # The colorspace used is HSV
 # H: Hue (From 0 to 180)

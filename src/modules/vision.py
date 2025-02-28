@@ -18,10 +18,10 @@ from dataclasses import dataclass
 @dataclass
 class ROI:
     """Region Of Interest"""
-    x1: int
-    y1: int
-    x2: int
-    y2: int
+
+    x1: int; y1: int
+    x2: int; y2: int
+
     def __init__(self, x1: int, y1: int, x2: int, y2: int):
         self.x1 = x1; self.y1 = y1
         self.x2 = x2; self.y2 = y2
@@ -30,16 +30,19 @@ class ROI:
 @dataclass
 class ContourInfo:
     """Class containing info about a detected object: position, area and contours"""
-    area: int
-    x: int
-    y: int
-    contour: 0
-    def __init__(self, area: int, x: int, y: int, contour):
-        self.area = area
-        self.x = x; self.y = y
-        self.contour = contour
+    area    : int
+    x       : int
+    y       : int
+    contour : any
 
-# Class:
+    def __init__(self, area: int, x: int, y: int, contour):
+        self.area    = area
+        self.contour = contour
+        self.x       = x;
+        self.y       = y
+
+
+#Pendiente: Hacer que el controlador de vision funcione en hilos.
 
 class VisionController():
 
@@ -47,11 +50,12 @@ class VisionController():
     def __init__(self, width: int, height: int):
         self.image_width  = width
         self.image_height = height
-        self.image_hsv = 0  
+        self.image_hsv    = 0  
 
-        self.picam = Picamera2()
+        self.picam        = Picamera2()
 
-        preview_config = self.picam.create_preview_configuration(main={"size": (640, 480)})
+        #configure picamera2
+        preview_config = self.picam.create_preview_configuration(main={"size": (width, height)})
         self.picam.configure(preview_config)
 
         self.picam.start()
