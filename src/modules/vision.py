@@ -5,6 +5,8 @@ from picamera2 import Picamera2
 from dataclasses import dataclass
 
 
+# Types:
+
 # Region Of Interest:
 #
 #  x1,y1----------------
@@ -37,6 +39,7 @@ class ContourInfo:
         self.x = x; self.y = y
         self.contour = contour
 
+# Class:
 
 class VisionController():
 
