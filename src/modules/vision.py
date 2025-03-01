@@ -22,10 +22,6 @@ class ROI:
     x1: int; y1: int
     x2: int; y2: int
 
-    def __init__(self, x1: int, y1: int, x2: int, y2: int):
-        self.x1 = x1; self.y1 = y1
-        self.x2 = x2; self.y2 = y2
-
 
 @dataclass
 class ContourInfo:
@@ -35,11 +31,6 @@ class ContourInfo:
     y       : int
     contour : any
 
-    def __init__(self, area: int, x: int, y: int, contour):
-        self.area    = area
-        self.contour = contour
-        self.x       = x;
-        self.y       = y
 
 
 #Pendiente: Hacer que el controlador de vision funcione en hilos.
@@ -51,7 +42,6 @@ class VisionController():
         self.image_width  = width
         self.image_height = height
         self.image_hsv    = 0  
-
         self.picam        = Picamera2()
 
         #configure picamera2
@@ -127,4 +117,4 @@ class VisionController():
                     max_x = x
                     max_cnt = c
 
-        return ContourInfo(max_area, max_y, max_x, max_cnt)
+        return ContourInfo(max_area, max_x, max_y, max_cnt)
