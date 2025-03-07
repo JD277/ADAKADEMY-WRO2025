@@ -74,6 +74,18 @@ class HALBI():
         #etc
         pass
 
+    def go_forward(self):
+        pass
+    
+    def go_backward(self):
+        pass
+
+    def turn_left(self):
+        pass
+
+    def turn_right(self):
+        pass
+
     def _test(self):
         """for testing components or mechanic movements"""
 
