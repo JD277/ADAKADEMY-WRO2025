@@ -53,7 +53,7 @@ class ArduinoController:
         """Sets the servo angle (0-180 degrees)."""
         self.servos[pin].write(angle)
 
-    def setup_motor_drv8833(self, in1_pin: int, in2_pin: int, motor_id: str):
+    def setup_motor(self, in1_pin: int, in2_pin: int, motor_id: str):
         """
         Configures a DC motor using the DRV8833 driver.
         For DRV8833, two control signals (in1 and in2) are used.
@@ -64,7 +64,7 @@ class ArduinoController:
             'in2': self.board.get_pin(f'd:{in2_pin}:p')   # PWM capable pin
         }
 
-    def set_motor_speed_drv8833(self, motor_id: str, speed: int):
+    def set_motor_speed(self, motor_id: str, speed: int):
         """
         Controls the speed and direction of the motor (-255 to 255) using DRV8833.
         If speed > 0: forward, if speed < 0: reverse, and if speed == 0: stop.
