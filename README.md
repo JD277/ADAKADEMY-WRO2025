@@ -32,7 +32,9 @@ This is the official Github repository for The Adakademy Team, before known as A
 
 ### Microcontroller
 
-### Schematics
+## Schematics
+
+
 
 ## Software
 
