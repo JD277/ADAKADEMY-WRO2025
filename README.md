@@ -10,14 +10,17 @@
 
 
 ## Intro
+
 This is the official Github repository for The Adakademy Team, before known as Adagroup, conformed by Jesser Palma, Jesús Alcalá and Hector Cartagena. This repository contains all the code, documentation, and resources for our project, HALBI. This is our third year participating in WRO
 
 
 ## First Design
 
-At first, we planned to design the car from scratch, modelling and printing our own 3D pieces, including the chassis and direction, Although it seemed like a good idea at first, as we progressed we started to face problem after problem, we realized that our current design would give us more problems, at the end we tried our best with the time constraints we had, and this was the vehicle we presented at WRO 2024, Cybercooper.
+At first, we planned to design the car from scratch, modeling and printing our own 3D pieces, including the chassis and direction, Although it seemed like a good idea at first, as we progressed we started to face problem after problem, we realized that our current design would give us more problems, at the end we tried our best with the time constraints we had, and this was the vehicle we presented at WRO 2024, Cybercooper.
 
 ![cybercooper](v-photos/old_right.jpg)
+![cybercooper](v-photos/old_front.jpg)
+
 
 ## Current Design
 
@@ -27,7 +30,7 @@ Given the resources we currently had, our main idea was to re-design Cybercooper
 
 ### Fischertechnik kit
 
-At the end, we decided to use a pre-made base for the chassis, the main reason for this was to save time ( and headaches) with the mechanical design, giving us more time to focus on the electronics and programming 
+At the end, we decided to use a premade base for the chassis, the main reason for this was to save time ( and headaches) with the mechanical design, giving us more time to focus on the electronics and programming.
 
 
 ## Car Photos
@@ -50,6 +53,12 @@ At the end, we decided to use a pre-made base for the chassis, the main reason f
 
 
 ## Software
+
+We developed the software using python3 as our main programming language and using Thonny/Terminal as code editor.
+
+#### Unifying Code
+
+We wanted to keep the code as simple as possible and use a single language, in order to make this possible we used a library called Pyfirmata which enables us to merge the microcontroller code and the raspberry code in a single unit.
 
 
 ### Open Challenge
