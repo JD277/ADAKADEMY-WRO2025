@@ -18,54 +18,55 @@ This is the official Github repository for The Adakademy Team, before known as A
 
 At first, we planned to design the car from scratch, modeling and printing our own 3D pieces, including the chassis and direction, Although it seemed like a good idea at first, as we progressed we started to face problem after problem, we realized that our current design would give us more problems, at the end we tried our best with the time constraints we had, and this was the vehicle we presented at WRO 2024, Cybercooper.
 
-![cybercooper](https://github.com/user-attachments/assets/188943c0-d6d6-4796-bf28-c8c82174c24e)
-
+![cybercooper](v-photos/old_right.jpg)
 
 ## Current Design
 
 ### Prototype
 
 Given the resources we currently had, our main idea was to re-design Cybercooper, modifying the existing base, strategy and using better electronic components; we started printing the new parts with white material and thinking of better ways to assemble the car direction.
-![cooper white prototype](https://github.com/user-attachments/assets/8885f4cd-e4e0-4fe3-9b6e-9026baf66653)
-
 
 ### Fischertechnik kit
 
 At the end, we decided to use a premade base for the chassis, the main reason for this was to save time ( and headaches) with the mechanical design, giving us more time to focus on the electronics and programming.
-![fischertechnik master kit car](https://github.com/user-attachments/assets/1b3b9a5c-0a64-4d31-8718-00e75f88f6c2)
-
 
 ## Car Photos
+
+
+
+# Hardware
+
+## Components
 
 
 ## Mobility
 
 ### Chassis
 
-## Electronics
+### Design
 
-### Raspberry
+## Power and Sense Management
 
-### Camera
-
-### Microcontroller
-
-## Schematics
-
-
-
-## Software
+# Software
 
 We developed the software using python3 as our main programming language and using Thonny/Terminal as code editor.
 
 #### Unifying Code
 
-We wanted to keep the code as simple as possible and use a single language, in order to make this possible we used a library called Pyfirmata which enables us to merge the microcontroller code and the raspberry code in a single unit.
+We wanted to keep the code as simple as possible and use a single language, in order to make this possible we used a library called Pyfirmata which enables us to merge the microcontroller code and the raspberry code in a single unit. 
+
+#### Image Processing
+
+The raspberry camera captures the image, which is converted to from BGR format to LAB `(lightness, green-red, blue-yellow)`. We use this colorspace because it's easier to detect the colors, regardless of the environment color.
+
+We use OpenCV to apply a threshold to the image, which returns a mask image with the pixels that reside within the specified color range, we can also reduce processing time by only searching within a specific region of interest on the screen.
+
+
 
 
 ### Open Challenge
 
-#### Image Processing
+#### 
 
 #### Steering Control
 
