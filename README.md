@@ -32,10 +32,6 @@ At the end, we decided to use a pre-made base for the chassis, the main reason f
 
 ## Car Photos
 
-## Design Process
-
-
-
 
 ## Mobility
 
