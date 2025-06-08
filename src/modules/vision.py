@@ -1,39 +1,8 @@
 import cv2 as cv
 import numpy as np
-from picamera2 import Picamera2
-
-from dataclasses import dataclass
+from constants import *
 
 
-# Types:
-
-# Region Of Interest:
-#
-#  x1,y1----------------
-#  |                    |
-#  |                    |
-#  |                    |
-#  -------------------x2,y2   
-
-@dataclass
-class ROI:
-    """Recive two points from the frame  to extract the Region Of Interest"""
-
-    x1: int; y1: int
-    x2: int; y2: int
-
-
-@dataclass
-class ContourInfo:
-    """Class containing info about a detected object: position, area and contours"""
-    area    : int
-    x       : int
-    y       : int
-    contour : any
-
-
-
-# Pendiente: Hacer que el controlador de vision funcione en hilos.
 
 class VisionController():
     """
@@ -44,28 +13,36 @@ class VisionController():
             height: is the the high of the cam resolution
     """
     # init picamera module with desired resolution
-    def __init__(self, width: int, height: int):
-
+    def __init__(self, width: int, height: int, usb_port):
 
         self.image_width  = width
         self.image_height = height
-        self.image_hsv = 0  
-        self.frame = 0
+        self.image_lab = 0
+        self.frame = any
+        self.camera_cap = cv.VideoCapture(usb_port)
+        self.camera_cap.set(cv.CAP_PROP_FRAME_WIDTH, 1280)
+        self.camera_cap.set(cv.CAP_PROP_FRAME_HEIGHT, 720)
 
-        self.picam = Picamera2()
-
-        # Configure picamera2
-        preview_config = self.picam.create_preview_configuration(main={"size": (width, height)})
-        self.picam.configure(preview_config)
-
-        self.picam.start()
+        
 
 
-    def receive_image(self):
+    def receive_image(self, test_img = None):
         """Receive image array from Picamera and convert it to hsv format"""
-        self.frame = self.picam.capture_array()
-        self.image_hsv = cv.cvtColor(self.frame, cv.COLOR_RGB2HSV)
+        ret, frame_read = self.camera_cap.read()
+        self.frame = frame_read
+        
+        if (test_img is not None):
+            self.frame = test_img
+        #self.frame = cv.rotate(self.frame, cv.ROTATE_90_COUNTERCLOCKWISE)
 
+        self.image_lab = cv.cvtColor(self.frame, cv.COLOR_BGR2LAB)
+        self.image_lab = cv.GaussianBlur(self.image_lab, (7,7), 0)
+
+    def draw_roi(self, roi):
+        cv.rectangle(self.frame, (roi.x1, roi.y1), (roi.x2, roi.y2), (0,255,0), 2)
+
+    def draw_contours(self, cnt, roi, color):
+        cv.drawContours(self.frame[roi.y1:roi.y2, roi.x1:roi.x2], cnt, -1, color, 2)
 
     def find_contours(self, range, roi: ROI):
         """
@@ -79,7 +56,7 @@ class VisionController():
                 The contours of the ROI
         """
         # Get region of interest (ROI)
-        img_segmented = self.image_hsv[roi.y1:roi.y2, roi.x1:roi.x2]
+        img_segmented = self.image_lab[roi.y1:roi.y2, roi.x1:roi.x2]
 
         # get lower and upper color limits from the provided range
         lower_mask = np.array(range[0])
@@ -111,13 +88,13 @@ class VisionController():
                 The largest detected object
         """
         # make sure there are contours to check for
-        if len(self.contours) == 0:
-            return 0
+        #if len(contours) == 0:
+            #return 0
         
         max_area = 0
         max_y = 0
         max_x = 0
-        max_cnt = None
+        max_cnt = any
 
         for c in contours:
             area = cv.contourArea(c)
@@ -125,6 +102,8 @@ class VisionController():
             if area > 100:  # Filter contours that are too small
                 approx = cv.approxPolyDP(c, 0.01 * cv.arcLength(c, True), True)
                 x, y, w, h = cv.boundingRect(approx)
+                #cv.rectangle(self.frame, (x, y), (x + w, y + h), (255,0,0), 1)
+                
 
                 # Convert relative position from the ROI to global position on camera.
                 x += roi.x1 + w // 2
@@ -144,4 +123,72 @@ class VisionController():
                     max_x = x
                     max_cnt = c
 
-        return ContourInfo(max_area, max_x, max_y, max_cnt)
+        return 	[max_area, max_x, max_y, max_cnt]
+    
+    
+if __name__ == "__main__":
+    from halbi import *
+
+
+    ROIs = [OPEN_ROI_LEFT, OPEN_ROI_RIGHT, OPEN_ROI_LINES]
+    
+    turnThresh = 150
+    exitThresh = 1500
+    
+    
+    visionc = VisionController(480, 640, 0)
+    leftArea = 0
+    rightArea = 0
+    
+    leftTurn = False
+    rightTurn = False
+
+    while (1):
+    
+            image = cv.imread('pista_centro.jpeg')
+            visionc.receive_image(image)
+    
+            
+            # contornos paredes negras
+            cnt_black_left = visionc.find_contours(mask_black, OPEN_ROI_LEFT)
+            cnt_black_right = visionc.find_contours(mask_black, OPEN_ROI_RIGHT)
+
+            # contornos lineas naranja y azul
+            cnt_orange = visionc.find_contours(mask_orange, OPEN_ROI_LINES)
+            cnt_blue = visionc.find_contours(mask_blue, OPEN_ROI_LINES)
+
+            # Area de las paredes
+            leftArea = visionc.max_contour(cnt_black_left, OPEN_ROI_LEFT)[0]
+            rightArea = visionc.max_contour(cnt_black_right, OPEN_ROI_RIGHT)[0]
+            
+            
+            visionc.draw_contours(cnt_black_left, OPEN_ROI_LEFT, (0,0,255))
+            visionc.draw_contours(cnt_black_right, OPEN_ROI_RIGHT, (255,255,0))
+            visionc.draw_contours(cnt_blue, OPEN_ROI_LINES, (255,0,255))
+            
+            print("Left Area " + str(leftArea) + " Right Area " + str(rightArea))
+            
+            direction = "none"
+            
+            if leftArea <= turnThresh:
+                direction = "left"
+                #print("left")
+                
+            if rightArea <= turnThresh:
+                direction = "right"
+                #print("right")
+            
+                
+            print(direction)
+            
+            for roi in ROIs:
+                visionc.draw_roi(roi)
+
+            
+            cv.imshow("frame", visionc.frame)
+            
+            if cv.waitKey(1) == ord('q'):
+                break
+        
+
+    cv.destroyAllWindows()

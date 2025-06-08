@@ -8,7 +8,7 @@ class ArduinoController:
         If no port is specified, it attempts to autodetect.
         """
         # If port is not provided, auto_setup returns the proper port
-        self.board = pyfirmata2.Arduino(port or pyfirmata2.auto_setup())
+        self.board = pyfirmata2.Arduino(port)
 
         # Start the iterator to continuously read data from Arduino
         self.iterator = pyfirmata2.util.Iterator(self.board)
@@ -96,8 +96,8 @@ class ArduinoController:
         """Closes the connection with Arduino."""
         self.iterator.stop()
         self.board.exit()
-from constants import *
-nano = ArduinoController("COM4")
+# from constants import *
+# nano = ArduinoController("/dev/ttyUSB0")
 # Testing LEDs
 # nano.setup_led(3)
 # nano.led_on(3)
