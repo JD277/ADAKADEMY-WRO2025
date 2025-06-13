@@ -208,37 +208,4 @@ class ArduinoController:
         
 from constants import *
 nano = ArduinoController("/dev/ttyUSB0")
-nano.interactive_test_menu()
-# Testing LEDs
-# nano.setup_led(4)
-# nano.led_on(4)
-# time.sleep(1)
-# nano.led_off(4)
-
-# Testing Buttons
-"""nano.setup_button(3)
-print("Configurado")
-input()"""
-
-# Testing Motors
-"""nano.setup_motor(12,11,"back",10)
-nano.set_motor_speed('back',100)
-print("listo")
-time.sleep(2)
-nano.set_motor_speed('back',0)
-time.sleep(2)
-nano.close()"""
-
-# Testing servo
-"""nano.setup_servo(9)
-nano.set_servo_angle(9,20)
-time.sleep(1)
-print(120)
-nano.set_servo_angle(9,90)
-time.sleep(2)
-print(70)
-nano.set_servo_angle(9,0)
-time.sleep(2)
-print(90)
-nano.set_servo_angle(9,20)
-"""
+# nano.interactive_test_menu()
