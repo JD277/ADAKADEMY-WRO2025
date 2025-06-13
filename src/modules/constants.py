@@ -16,14 +16,22 @@ class ROI:
     x2: int; y2: int
 
 
-# Arduino pins
-IN_3 = 3
-IN_4 = 4
-ENB = 5 # ENABLE
-SERVO_PIN = 6
-RIGHT = 120
-LEFT = 70
-CENTER = 90
+# Motor PINS
+IN_3 = 12
+IN_4 = 11
+ENB = 10 # ENABLE
+# Servo PINS and VALUES
+SERVO_PIN = 9
+
+RIGHT = 0
+LEFT = 90
+CENTER = 20
+
+# LEDS PINS
+LED_YELLOW = 7
+LED_RED = 6
+LED_WHITE = 5
+LED_GREEN = 4
 
 
 RED_TARGET = 110 
