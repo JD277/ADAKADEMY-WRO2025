@@ -3,7 +3,11 @@
 - Lower Chasis
 - Direction
 ## Fischertechnik kit
-
+- Battery base
+- Base hw-095
+- Top base
+- Clip union
+- Base extension
 
 
 # Overview
@@ -33,3 +37,33 @@ Powered by the rear axle, which consists of a single-speed transmission, the dri
 When the engine induces a force in the pinion, it moves the crown gear then this movement is passed to the satellite type gear (1.4cm in diameter and 26 teeth), then it goes to the crown gear that moves the other satellite type gear (28 teeth and 1.4cm in diameter) where part of the initial speed is lost, but more force (torque) is gained, this intermediate shaft made of metal is composed of three plastic gears (crown gear, pinion and a normal spur gear), where the pinion and the spur gear drive the output shaft.
 
 After transferring the motion to the output shaft, it transmits the motion to the threaded bar inside the crown gear. The shaft is then sleeved, and the sleeve is attached to the 60BRS ball bearing to stabilize the shaft, which connects to the threaded bar where the wheel will be fitted with a plastic lock. All of these parts are located at the bottom of the vehicle, held in place by a bearing.
+
+
+# Documentation for models
+
+##  Folder structure
+The models files are organized with this order:
+```
+ADAKADEMY-WRO2025/models/
+├── Base de baterias.3mf
+├── Base hw-095.3mf
+├── Base superior.3mf
+├── Clip union.3mf
+└── Extension base.3mf
+```
+Where:
+
+- `/Base de baterias.3mf`: Model used to connect the LX-2BUPS module to the chassis
+- `/Base hw-095.3mf`: Model used to connect the HW-095 module to the chassis
+- `/Base superior.3mf`: Top extension model to connect more modules to the chassis
+- `/Clip union.3mf`: Clip to connect the model extension 
+- `/Extension base.3mf`: Extension model to increase the height of components by 10 mm
+
+
+## Table of contents
+
+1. [Base de baterias.3mf] (#Base de baterias.3mf)
+2. [Base hw-095.3mf] (#Base hw-095.3mf)
+3. [Base superior.3mf] (#Base superior.3mf)
+4. [Clip union.3mf] (#Clip union.3mf)
+5. [Extension base.3mf] (#Extension base.3mf)
