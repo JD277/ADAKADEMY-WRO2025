@@ -10,7 +10,7 @@ This is the official Github repository for The Adakademy Team, before known as A
 * Jesser Palma, 20 years old, jssrpalma3@gmail.com
 ---
 # 📖 Content of README 📖
-* **[Hardware](#-hardware-)**
+* **[Hardware](#hardware)**
   * [Components](#%EF%B8%8F-components-%EF%B8%8F)
   * [Mobility Management](#-mobility-management-)
     * [Chassis](#chassis)
