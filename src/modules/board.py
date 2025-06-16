@@ -1,5 +1,6 @@
 import time
 import pyfirmata2
+from constants import *
 
 class ArduinoController:
     def __init__(self, port=None):
@@ -48,6 +49,7 @@ class ArduinoController:
     def setup_servo(self, pin: int):
         """Configures a servo on the specified pin."""
         self.servos[pin] = self.board.get_pin(f'd:{pin}:s')  # Servo mode
+        self.servos[pin].write(CENTER)
         time.sleep(0.1)  # Small pause for initialization
 
     def set_servo_angle(self, pin: int, angle: float):
@@ -205,7 +207,3 @@ class ArduinoController:
         """Closes the connection with Arduino."""
         self.iterator.stop()
         self.board.exit()
-        
-from constants import *
-nano = ArduinoController("/dev/ttyUSB0")
-# nano.interactive_test_menu()
