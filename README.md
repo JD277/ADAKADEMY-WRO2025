@@ -1,12 +1,14 @@
 ## Intro
 
 This is the official Github repository for The Adakademy Team, before known as Adagroup, conformed by Jesser Palma, Jesús Alcalá and Hector Cartagena. This repository contains all the code, documentation, and resources for our project, HALBI. This is our third year participating in WRO
-# Team Members
+
 ---
+# Team Members
+
 * Jesús Alcalá, 20 years old, jdam5000@gmail.com
 * Héctor Cartagena, 18 years old, cartagenahector0608@gmail.com
 * Jesser Palma, 20 years old, jssrpalma3@gmail.com
-*  
+---
 # 📖 Content of README 📖
 * **[Hardware](#-hardware-)**
   * [Components](#%EF%B8%8F-components-%EF%B8%8F)
@@ -31,6 +33,7 @@ This is the official Github repository for The Adakademy Team, before known as A
     *  [Backing Up](#backing-up--obstacle-challenge-)
     *  [Potential Improvement: Stuck Detection](#potential-improvement-stuck-detection--open-challenge--obstacle-challenge-)
 * **[Assembly Instructions](#-complete-assembly-instructions-)**
+---
 # Hardware
 ## Components
 | Cantidad | Producto               | Precio Unitario | Total |
@@ -42,9 +45,44 @@ This is the official Github repository for The Adakademy Team, before known as A
 | 1        | [MT6068](https://www.amazon.com/-/es/Buying-M%C3%B3dulo-impulso-ajustable-MT3608/dp/B0CWKWX7QC/ref=sr_1_1?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3AMK4Y558HYRY&dib=eyJ2IjoiMSJ9.TLalRqJgBH_tYg3eQzefQNBWcCAoerGOdsZZi5tRkJtDW1CjUQosN4toICQahARr.I6Dv41TBneu-vEf_xEvgYoSrcdCVc65wJ83TyWypJHQ&dib_tag=se&keywords=mt3068&qid=1749993307&sprefix=mt3068%2Caps%2C191&sr=8-1)                 | $3.00          | $3.00  |
 | 1        | [L298N](https://www.amazon.com/-/es/WWZMDiB-L298N-controlador-Arduino-Raspberry/dp/B0CR6BX5QL/ref=sr_1_4?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3O8OXGKCCVRG0&dib=eyJ2IjoiMSJ9.hK2FjV8Ukp8CCyVTI1seMk4n3aguoO_lNXX3xoiH-O0C4rrvapYby0KxsXYQdeAe863BgigxTsz1ePawqec8Hh-ZvnLMo-m-4Dm_xbIy8313Qvap61RJcd5w5fRsxA1Mfu7r-1bPw7I6tgDfFY8-XvbRp4S63ohCGnn4r_olt3NPelIGMHtKNp3R0LG1qMBP1e27x9q6fx21i5dQHcNxvQLKsGfCJHzstSjLouT-lF4.GfRYImaJhtuQGrdEbIedHfK0ZnReNVJ_VW1xuDtjz-4&dib_tag=se&keywords=l298n&qid=1749993492&sprefix=l298n%2Caps%2C179&sr=8-4)                  | $5.00          | $5.00  |
 | 1        | [Arduino nano](https://www.amazon.com/-/es/Nano-conexi%C3%B3n-compatible-Arduino-V3-0/dp/B0B42GRG15/ref=sr_1_2?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=XW2BW8O1LXM1&dib=eyJ2IjoiMSJ9.qqetOTfNU56DCiKxDKpSY1mJEp8ImS6fK8GCDePazTZaNWy--wqAeFwbylHjbgMSjt8DkzFqzdbxxYSuczs_68pbBBsiqJ6JERyDANoDy1gFkr6ldjTNF-jhcupMFGeJYIE2pryL8jTW0DCCXmgjpUt_ZpGP6j7KaDwpF--Tap-TNBCnpWQudo4_N5-gKTl1qrjA9gm8z87yWbz5P9jGuOvQq81twJbp41PbsbeNKyM.VhK3Ex_WQ2P9kw3wiIa67gyryce4fQk7YtvEOlWEpdY&dib_tag=se&keywords=arduino+nano+usb+c&qid=1749993530&sprefix=arduino+nano+usb+c%2Caps%2C198&sr=8-2)           | $10.00         | $10.00 |
-| 2        | [LX-2BUPS](https://www.amazon.com/-/es/Bater%C3%ADa-M%C3%B3dulo-Cargador-Tablero-Indicador/dp/B0CGZS38QR/ref=sr_1_1?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=136Q8NU91WK25&dib=eyJ2IjoiMSJ9.OUZ7CB2S6RhhunyygWStlhYXdkOxEQWEOd7igJQg-ILCCJFEW-Is87jcLbWIrBYqBUWPaTZceymcS13W2cNtIA.zeXlgUhXAuX3iUN4TpHTLoBrpBR5GAd59arz0m_-F44&dib_tag=se&keywords=lx-2bups&qid=1749991945&sprefix=lx-2bups%2Caps%2C289&sr=8-1&th=1)               | $5.24          | $10.48 |
+| 2        | [LX-2BUPS 5v](https://www.amazon.com/-/es/Bater%C3%ADa-M%C3%B3dulo-Cargador-Tablero-Indicador/dp/B0CGZS38QR/ref=sr_1_1?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=136Q8NU91WK25&dib=eyJ2IjoiMSJ9.OUZ7CB2S6RhhunyygWStlhYXdkOxEQWEOd7igJQg-ILCCJFEW-Is87jcLbWIrBYqBUWPaTZceymcS13W2cNtIA.zeXlgUhXAuX3iUN4TpHTLoBrpBR5GAd59arz0m_-F44&dib_tag=se&keywords=lx-2bups&qid=1749991945&sprefix=lx-2bups%2Caps%2C289&sr=8-1&th=1)               | $5.24          | $10.48 |
 | 2        | [USB cable type C](https://www.amazon.com/paquete-cables-trenzados-iPhone-Samsung/dp/B0DPMQ7291/ref=sr_1_2_sspa?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=19WFOH9SGQR6X&dib=eyJ2IjoiMSJ9.TwlOm7HeKVsOKER2sTeYNLD5mWAyTg5X856GRR8FkQvdG6_mf3AkJUFATBnv2BeM8xp9pvV-C07pI8XJwoQ_eKhFW_LFDsdW4gMXxY4SR16LNgk9hBwUKvpjZFP6bFsEPKocQuodZaAIRYU69ZSXUM4tDsU4ICjfgal6OKZ0AduJXFmkanzaBUevDxYOerGFGKB3YJBU--yu-UaFZyqTN1Tva5bVN1G6vEmKS4970rU.FvhJ8ACjur6SL9B8e6yG-afZRtFQW6M1iDPJC9vrJN0&dib_tag=se&keywords=usb%2Bcable%2BC&qid=1749992275&sprefix=usb%2Bcable%2Bc%2Caps%2C204&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1)       | $6.00          | $12.00 |
 | **Total** |                        |                | **$460.48** |
+
+## Components description
+### Raspberry PI 4 B 🚀 
+
+The Raspberry Pi 4 Model B  is a powerful, credit-card-sized single-board computer (SBC)  developed by the Raspberry Pi Foundation. It is widely used in robotics, IoT projects, and embedded systems due to its versatility, performance, and affordability. 
+
+![Raspberry](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR97vGNS_Bob3FpycF1ZooG3lmox1eXxC0DyA&s)
+
+Our strategy is centered on computer vision algorithms developed by us using **[Opencv](https://opencv.org/)** with python, for that reason we have choose this computer given that have a low electrcity consumption (5v 3A) contrary to the pi 5 (5V 5A 😬 To high!) besides is better option that the pi 3 B that we used the last time
+
+### Fischertechnik kit 🏎️
+The Fischertechnik Maker Kit Car is a pre-assembled chassis that provides a solid foundation for creating functional models or prototypes of vehicles. It includes essential components such as wheels, motors, axles, and structural elements that allow users to build a stable base for their projects. The kit is compatible with various motors, sensors, and other electronic components, making it ideal for integrating advanced functionalities like autonomous driving, obstacle avoidance, or remote control. The design is modular, enabling easy modifications and upgrades as needed. This flexibility allows users to experiment with different configurations and mechanical setups without needing to start from scratch.
+
+Kits like this are ideal for teams new to robotics because they eliminate the need for extensive mechanical assembly or 3D modeling skills. By using a pre-assembled kit, you can focus on higher-level tasks such as programming, sensor integration, and algorithm development without worrying about building the physical structure from scratch. This approach is particularly beneficial for educational purposes, as it allows students to quickly prototype ideas and test concepts without getting bogged down by mechanical complexities. Additionally, many international teams use similar kits, making it a widely accepted and practical choice for competitions like the World Robot Olympiad (WRO).
+
+![halbi](https://media.fischer.group/v7/_pim-media-prod_/Product%20Pictures/Product%20Pictures%20fischertechnik/W1_P_P_571900_CAR.jpg?trim=5&func=fit&bg_colour=fff&org_if_sml=0&w=638&h=448.875)
+
+While pre-assembled kits offer convenience, designing and 3D-printing your own chassis provides several advantages. First, custom chassis designs allow for greater flexibility and optimization, enabling you to tailor the vehicle to specific requirements such as weight distribution, component placement, and cost-efficiency. A well-designed custom chassis can also be more durable and reliable than off-the-shelf kits, which may have fragile parts that are not easily replaceable. Furthermore, creating your own chassis fosters deeper learning in mechanical engineering, CAD modeling, and prototyping—skills that are highly valued in robotics and engineering competitions. While it requires more time and technical expertise upfront, the ability to iterate and refine your design based on testing results leads to a more robust and competitive robot. Ultimately, while pre-assembled kits are great for getting started, building your own chassis offers superior customization, cost savings, and educational value, making it the preferred choice for advanced teams aiming to push the boundaries of innovation in the WRO FE category.
+
+### Li-on 18650 Batteries, LX-2BUPS MT3068 🔋
+
+The robot uses two 18650 Li-ion batteries  combined with an LX-2BUPS MT3068 power management module , which allows the system to function without complex circuitry or custom-built charging solutions. This setup provides a stable power source for both the Raspberry Pi and motor driver, making it suitable for teams without advanced electronics experience. The LX-2BUPS module acts as a UPS (uninterruptible power supply), ensuring smooth transitions between charging and discharging states. However, this configuration has some limitations: the 18650 batteries are relatively large, making space management within the chassis challenging. Additionally, these batteries have limited runtime when powering high-consumption components like the Raspberry Pi, especially during intensive tasks such as image processing. 
+
+To address voltage requirements for the motors, we included a step-up module to boost the output to 11.24V , allowing the motors to operate at optimal speed. While this setup works well for basic operation, it lacks a Battery Management System (BMS) , meaning there’s no automatic balancing of charge between the two batteries. As a result, one battery may discharge faster than the other, potentially leading to unstable power delivery or overheating. Despite its drawbacks, this energy solution was chosen because our team lacked the expertise to design and implement a more advanced Li-Po-based system from scratch. It serves as a functional starting point that enables us to focus on software and sensor integration while preparing for future improvements through custom-designed power circuits. 
+
+### Arduino nano
+For our autonomous vehicle project, we chose the Arduino Nano with USB-C  as the primary microcontroller to handle sensor inputs, motor control, and coordination with the main Single-Board Computer (SBC), such as a Raspberry Pi. This decision was driven by both practical and ergonomic considerations—primarily, our team’s preference for the USB-C interface , which offers better durability, faster data transfer, and reversible plug orientation compared to older micro-USB connectors. 
+
+While the Arduino Nano (USB-C version) is not strictly required for this project, its compact size, wide community support, and compatibility with the Firmata2 protocol  made it a natural fit for rapid prototyping and integration with Python-based control logic running on the SBC. 
+
+### L298n
+The L298N H-Bridge module  is a dual motor driver commonly used in robotics to control the direction and speed of DC motors. It allows bidirectional motor control using Pulse Width Modulation (PWM) signals from microcontrollers like Arduino or Raspberry Pi. This makes it ideal for basic robotic platforms where simplicity and ease of use are prioritized over high efficiency. 
+
+While the L298N is user-friendly and widely available, it has some limitations such as high voltage drop  (around 1.5V–3V per motor), which reduces the effective voltage delivered to the motors. This can affect performance, especially when using lower-voltage batteries. Additionally, it tends to generate significant heat , often requiring heatsinks or cooling solutions during prolonged operation. We don't opt for more efficient drivers like the DRV8833  or TB6612 , which offer better energy efficiency and thermal performance because find or deliver those drivers for Venezuela is very hard. However, for early development and testing, the L298N remains a solid choice due to its ease of integration and widespread community support.
+
 ### First Design
 
 At first, we planned to design the car from scratch, modeling and printing our own 3D pieces, including the chassis and direction, Although it seemed like a good idea at first, as we progressed we started to face problem after problem, we realized that our current design would give us more problems, at the end we tried our best with the time constraints we had, and this was the vehicle we presented at WRO 2024, Cybercooper.
