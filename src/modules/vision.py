@@ -13,27 +13,26 @@ class VisionController():
             height: is the the high of the cam resolution
     """
     # init picamera module with desired resolution
-    def __init__(self, width: int, height: int, usb_port):
+    def __init__(self, usb_port):
 
-        self.image_width  = width
-        self.image_height = height
+        self.image_width  = 640
+        self.image_height = 480
         self.image_lab = 0
         self.frame = any
         self.camera_cap = cv.VideoCapture(usb_port)
-        self.camera_cap.set(cv.CAP_PROP_FRAME_WIDTH, 1280)
-        self.camera_cap.set(cv.CAP_PROP_FRAME_HEIGHT, 720)
+        self.camera_cap.set(cv.CAP_PROP_FRAME_WIDTH, self.image_width)
+        self.camera_cap.set(cv.CAP_PROP_FRAME_HEIGHT, self.image_height)
 
         
 
 
-    def receive_image(self, test_img = None):
+    def receive_image(self):
         """Receive image array from Picamera and convert it to hsv format"""
         ret, frame_read = self.camera_cap.read()
+        if not ret:
+            print("No se pudo obtener imagen de la camara.")
         self.frame = frame_read
-        
-        if (test_img is not None):
-            self.frame = test_img
-        #self.frame = cv.rotate(self.frame, cv.ROTATE_90_COUNTERCLOCKWISE)
+    
 
         self.image_lab = cv.cvtColor(self.frame, cv.COLOR_BGR2LAB)
         self.image_lab = cv.GaussianBlur(self.image_lab, (7,7), 0)
@@ -130,13 +129,13 @@ if __name__ == "__main__":
     from halbi import *
 
 
-    ROIs = [OPEN_ROI_LEFT, OPEN_ROI_RIGHT, OPEN_ROI_LINES]
+    ROIs = [OPEN_ROI_LINES]
     
     turnThresh = 150
     exitThresh = 1500
     
     
-    visionc = VisionController(480, 640, 0)
+    visionc = VisionController(0)
     leftArea = 0
     rightArea = 0
     
@@ -145,41 +144,21 @@ if __name__ == "__main__":
 
     while (1):
     
-            image = cv.imread('pista_centro.jpeg')
-            visionc.receive_image(image)
+            visionc.receive_image()
     
             
             # contornos paredes negras
-            cnt_black_left = visionc.find_contours(mask_black, OPEN_ROI_LEFT)
-            cnt_black_right = visionc.find_contours(mask_black, OPEN_ROI_RIGHT)
+            cnt_lines_blue = visionc.find_contours(mask_blue, OPEN_ROI_LINES)
+            cnt_lines_orange = visionc.find_contours(mask_orange, OPEN_ROI_LINES)
+            
+            
+            
+            
+        
+            visionc.draw_contours(cnt_lines_blue, OPEN_ROI_LINES, (255,0,255))
 
-            # contornos lineas naranja y azul
-            cnt_orange = visionc.find_contours(mask_orange, OPEN_ROI_LINES)
-            cnt_blue = visionc.find_contours(mask_blue, OPEN_ROI_LINES)
-
-            # Area de las paredes
-            leftArea = visionc.max_contour(cnt_black_left, OPEN_ROI_LEFT)[0]
-            rightArea = visionc.max_contour(cnt_black_right, OPEN_ROI_RIGHT)[0]
-            
-            
-            visionc.draw_contours(cnt_black_left, OPEN_ROI_LEFT, (0,0,255))
-            visionc.draw_contours(cnt_black_right, OPEN_ROI_RIGHT, (255,255,0))
-            visionc.draw_contours(cnt_blue, OPEN_ROI_LINES, (255,0,255))
-            
-            print("Left Area " + str(leftArea) + " Right Area " + str(rightArea))
-            
-            direction = "none"
-            
-            if leftArea <= turnThresh:
-                direction = "left"
-                #print("left")
-                
-            if rightArea <= turnThresh:
-                direction = "right"
-                #print("right")
             
                 
-            print(direction)
             
             for roi in ROIs:
                 visionc.draw_roi(roi)

@@ -14,8 +14,8 @@ maskDict = {
     "red": mask_red,
     "green": mask_green,
     "blue": mask_blue,
-    "orange": mask_orange,
-    "black": mask_black
+    "orange": mask_orange_test,
+    "black": mask_black_test
 }
 
 #set mask based on program arguments
@@ -84,18 +84,7 @@ def on_high_B_thresh_trackbar(val):
     high_B = max(high_B, low_B+1)
     cv.setTrackbarPos(high_B_name, window_detection_name, high_B)
 
-# Initialize the PiCamera2
-picam2 = Picamera2()
-picam2.preview_configuration.main.size = (640,480)
-picam2.set_controls({"AeEnable": True})
-picam2.preview_configuration.main.format = "RGB888"
-print(picam2.preview_configuration.controls.FrameRate)
-picam2.preview_configuration.controls.FrameRate = 30
-print(picam2.preview_configuration.controls.FrameRate)
-picam2.preview_configuration.align()
-picam2.configure("preview")
-picam2.start()
-
+cap = cv.VideoCapture(0)
 ## [window]
 cv.namedWindow(window_capture_name)
 cv.namedWindow(window_detection_name)
@@ -112,7 +101,7 @@ cv.createTrackbar(high_B_name, window_detection_name , high_B, max_value_AB, on_
 
 while True:
     # Capture the frame
-    frame = picam2.capture_array()
+    ret, frame = cap.read()
 
     # Convert from BGR to LAB
     frame_LAB = cv.cvtColor(frame, cv.COLOR_BGR2Lab)
@@ -146,7 +135,7 @@ while True:
     # Exit on 'q' or ESC
     key = cv.waitKey(30)
     if key == ord('q') or key == 27:
-        picam2.stop()
+        cap.release()
         cv.destroyAllWindows()
         
         # Print the LAB range for reference
