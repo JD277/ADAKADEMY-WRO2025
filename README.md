@@ -11,7 +11,8 @@ This is the official Github repository for The Adakademy Team, before known as A
 ---
 # 📖 Content of README 📖
 * **[Hardware](#hardware)**
-  * [Components](#%EF%B8%8F-components-%EF%B8%8F)
+  * [Components](#components)
+  * [Components Description](#description)
   * [Mobility Management](#-mobility-management-)
     * [Chassis](#chassis)
     * [Design](#design)
@@ -52,7 +53,7 @@ This is the official Github repository for The Adakademy Team, before known as A
 | **Total** |                        |                | **$397.48** |
 
 ---
-## Components description
+## Description
 ---
 ### Raspberry PI 4 B 🚀 
 
