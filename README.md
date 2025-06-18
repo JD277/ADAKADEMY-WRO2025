@@ -13,7 +13,7 @@ This is the official Github repository for The Adakademy Team, before known as A
 * **[Hardware](#hardware)**
   * [Components](#components)
   * [Components description](#components-description)
-  * [Wiring Driagram](#wiring)
+  * [Wiring Diagram](#wiring)
   * [Mobility Management](#-mobility-management-)
     * [Chassis](#chassis)
     * [Design](#design)
@@ -80,6 +80,10 @@ While pre-assembled kits offer convenience, designing and 3D-printing your own c
 The robot uses two 18650 Li-ion batteries  combined with an LX-2BUPS MT3068 power management module , which allows the system to function without complex circuitry or custom-built charging solutions. This setup provides a stable power source for both the Raspberry Pi and motor driver, making it suitable for teams without advanced electronics experience. The LX-2BUPS module acts as a UPS (uninterruptible power supply), ensuring smooth transitions between charging and discharging states. However, this configuration has some limitations: the 18650 batteries are relatively large, making space management within the chassis challenging. Additionally, these batteries have limited runtime when powering high-consumption components like the Raspberry Pi, especially during intensive tasks such as image processing. 
 
 To address voltage requirements for the motors, we included a step-up module to boost the output to 11.24V , allowing the motors to operate at optimal speed. While this setup works well for basic operation, it lacks a Battery Management System (BMS) , meaning there’s no automatic balancing of charge between the two batteries. As a result, one battery may discharge faster than the other, potentially leading to unstable power delivery or overheating. Despite its drawbacks, this energy solution was chosen because our team lacked the expertise to design and implement a more advanced Li-Po-based system from scratch. It serves as a functional starting point that enables us to focus on software and sensor integration while preparing for future improvements through custom-designed power circuits. 
+
+![LX2-BUSB](https://ndft.com.ua/wp-content/uploads/2024/02/ups18650-9v-1.6a-lx-2bups-01-600x600.jpg)
+
+![mt3068](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn1Sv7f9wSsHRTk7usT8XIPjlM8y--4sjbYA&s)
 
 ---
 ### Arduino nano
