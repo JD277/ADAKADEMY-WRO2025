@@ -108,12 +108,23 @@ Remember to buy every component before start building
 ![cables](src/Wiring_diagram.png)
 
 ## Mobyility management 
+
 ### Chasis
 At first, we planned to design the car from scratch, modeling and printing our own 3D pieces, including the chassis and direction, Although it seemed like a good idea at first, as we progressed we started to face problem after problem, we realized that our current design would give us more problems, at the end we tried our best with the time constraints we had, and this was the vehicle we presented at WRO 2024, Cybercooper.
 
 ![cybercooper](v-photos/old_right.jpg)
 
-To test new ways to achive the goal and win the competition, with that in mind after a lot investigation watching videos, others teams repositoried we choose the Maker kit car wich we described ear
+To test new ways to achive the goal and win the competition, with that in mind after a lot investigation watching videos, others teams repositoried we choose the Maker kit car wich we described earlier, and after testing we could notice this about our election
+
+- The chassis have many fragile parts
+- Have a deviation on the direction because the wheels oscillate 
+- The wheels axis are made from plastic so if you put much weight it will broke 
+
+So if you're starting we recommend it but we determine is better inversion to model your own chasis 
+
+### Desing
+
+As the kit have 
 
 #### Prototype
 
