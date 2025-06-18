@@ -12,7 +12,8 @@ This is the official Github repository for The Adakademy Team, before known as A
 # 📖 Content of README 📖
 * **[Hardware](#hardware)**
   * [Components](#components)
-  * [Components Description](#description)
+  * [Components description](#components-description)
+  * [Wiring Driagram](#wiring)
   * [Mobility Management](#-mobility-management-)
     * [Chassis](#chassis)
     * [Design](#design)
@@ -53,8 +54,8 @@ This is the official Github repository for The Adakademy Team, before known as A
 | **Total** |                        |                | **$397.48** |
 
 ---
-## Description
----
+## Components description
+
 ### Raspberry PI 4 B 🚀 
 
 The Raspberry Pi 4 Model B  is a powerful, credit-card-sized single-board computer (SBC)  developed by the Raspberry Pi Foundation. It is widely used in robotics, IoT projects, and embedded systems due to its versatility, performance, and affordability. 
