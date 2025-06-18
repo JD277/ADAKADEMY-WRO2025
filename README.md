@@ -13,7 +13,7 @@ This is the official Github repository for The Adakademy Team, before known as A
 * **[Hardware](#hardware)**
   * [Components](#components)
   * [Components description](#components-description)
-  * [Wiring Diagram](#wiring)
+  * [Wiring Diagram](#wiring-diagram)
   * [Mobility Management](#-mobility-management-)
     * [Chassis](#chassis)
     * [Design](#design)
@@ -90,6 +90,7 @@ To address voltage requirements for the motors, we included a step-up module to 
 For our autonomous vehicle project, we chose the Arduino Nano with USB-C  as the primary microcontroller to handle sensor inputs, motor control, and coordination with the main Single-Board Computer (SBC), such as a Raspberry Pi. This decision was driven by both practical and ergonomic considerations—primarily, our team’s preference for the USB-C interface , which offers better durability, faster data transfer, and reversible plug orientation compared to older micro-USB connectors. 
 
 While the Arduino Nano (USB-C version) is not strictly required for this project, its compact size, wide community support, and compatibility with the Firmata2 protocol  made it a natural fit for rapid prototyping and integration with Python-based control logic running on the SBC. 
+![nano](https://www.universal-solder.ca/wp-content/uploads/2025/01/canaduino-arduino-nano-v3-ch340-USB-C-3.jpg.webp)
 
 ---
 ### L298n
@@ -97,8 +98,14 @@ The L298N H-Bridge module  is a dual motor driver commonly used in robotics to c
 
 While the L298N is user-friendly and widely available, it has some limitations such as high voltage drop  (around 1.5V–3V per motor), which reduces the effective voltage delivered to the motors. This can affect performance, especially when using lower-voltage batteries. Additionally, it tends to generate significant heat , often requiring heatsinks or cooling solutions during prolonged operation. We don't opt for more efficient drivers like the DRV8833  or TB6612 , which offer better energy efficiency and thermal performance because find or deliver those drivers for Venezuela is very hard. However, for early development and testing, the L298N remains a solid choice due to its ease of integration and widespread community support.
 
+
+![L298N](https://http2.mlstatic.com/D_NQ_NP_832041-MLV73442990809_122023-O.webp)
+
 ---
-### First Design
+## Wiring Diagram
+This is the the wiring diagram to assemble your own Dark Halbi! 
+Remember to buy every component before start building
+![cables](Wiring diagram.png)
 
 At first, we planned to design the car from scratch, modeling and printing our own 3D pieces, including the chassis and direction, Although it seemed like a good idea at first, as we progressed we started to face problem after problem, we realized that our current design would give us more problems, at the end we tried our best with the time constraints we had, and this was the vehicle we presented at WRO 2024, Cybercooper.
 
