@@ -105,7 +105,8 @@ While the L298N is user-friendly and widely available, it has some limitations s
 ## Wiring Diagram
 This is the the wiring diagram to assemble your own Dark Halbi! 
 Remember to buy every component before start building
-![cables](Wiring diagram.png)
+
+![cables](src/Wiring diagram.png)
 
 At first, we planned to design the car from scratch, modeling and printing our own 3D pieces, including the chassis and direction, Although it seemed like a good idea at first, as we progressed we started to face problem after problem, we realized that our current design would give us more problems, at the end we tried our best with the time constraints we had, and this was the vehicle we presented at WRO 2024, Cybercooper.
 
