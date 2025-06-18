@@ -124,7 +124,8 @@ So if you're starting we recommend it but we determine is better inversion to mo
 
 ### Desing
 
-As the kit have 
+As the kit is made of parts like lego we just design pieces to be compatible with the chassis, after we designed the pieces we fixed the components with screw/glue. But our inspiration it continues being the Cybertruck of tesla
+
 
 #### Prototype
 
