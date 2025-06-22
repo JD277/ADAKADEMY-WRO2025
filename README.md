@@ -127,7 +127,9 @@ So if you're starting we recommend it but we determine is better inversion to mo
 As the kit is made of parts like lego we just design pieces to be compatible with the chassis, after we designed the pieces we fixed the components with screw/glue. But our inspiration it continues being the Cybertruck of tesla. We have many goals and we are excited about the future because each year we get better and develop betters solutions.
 ![Cybertruck](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8swiJgrYVAy5-1sr-J3byiYGwJpsY0s9R5Q&s)
 
-In other aspects like direction, the kit use an simple Ackerman direction powred by a servo with 1.8kgcm standing torque
+In other aspects like direction, the kit use an simple Ackerman direction powered by a servo with 1.8kgcm standing torque, said direction is a geometric design principle used in vehicles to ensure that both front wheels turn at different angles when making a turn, allowing the vehicle to move smoothly around corners without skidding. This system uses a linkage setup that enables the inner wheel to turn sharper than the outer wheel, following the natural arc of the turn. In the Fischertechnik Maker Kit Car , the Ackermann steering mechanism is implemented using a set of tie rods connected to the front wheels. [We recommed this video to learn more about it](https://www.youtube.com/watch?v=hsQO5C0adQk)
+
+While the propulsion is made by a mechanism called "diferential" wich works
 ### Motors 
 
 The kit brings with the servo motor and the propulsion motor wich powerup the car to run 
