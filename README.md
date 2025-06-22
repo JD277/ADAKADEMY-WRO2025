@@ -124,13 +124,14 @@ So if you're starting we recommend it but we determine is better inversion to mo
 
 ### Desing
 
-As the kit is made of parts like lego we just design pieces to be compatible with the chassis, after we designed the pieces we fixed the components with screw/glue. But our inspiration it continues being the Cybertruck of tesla
+As the kit is made of parts like lego we just design pieces to be compatible with the chassis, after we designed the pieces we fixed the components with screw/glue. But our inspiration it continues being the Cybertruck of tesla. We have many goals and we are excited about the future because each year we get better and develop betters solutions.
+![Cybertruck](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8swiJgrYVAy5-1sr-J3byiYGwJpsY0s9R5Q&s)
 
+In other aspects like direction, the kit use an simple Ackerman direction powred by a servo with 1.8kgcm standing torque
 ### Motors 
 
 The kit brings with the servo motor and the propulsion motor wich powerup the car to run 
 
-![Cybertruck](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8swiJgrYVAy5-1sr-J3byiYGwJpsY0s9R5Q&s)
 
 
 
