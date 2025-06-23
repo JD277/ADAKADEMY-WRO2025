@@ -54,82 +54,21 @@ This is the official Github repository for The Adakademy Team, before known as A
 | **Total** |                        |                | **$397.48** |
 
 ---
-## Components description
 
-### Raspberry PI 4 B 🚀 
-
-The Raspberry Pi 4 Model B  is a powerful, credit-card-sized single-board computer (SBC)  developed by the Raspberry Pi Foundation. It is widely used in robotics, IoT projects, and embedded systems due to its versatility, performance, and affordability. 
-
-![Raspberry](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR97vGNS_Bob3FpycF1ZooG3lmox1eXxC0DyA&s)
-
-Our strategy is centered on computer vision algorithms developed by us using **[Opencv](https://opencv.org/)** with python, for that reason we have choose this computer given that have a low electrcity consumption (5v 3A) contrary to the pi 5 (5V 5A 😬 To high!) besides is better option that the pi 3 B that we used the last time
-
----
-### Fischertechnik kit 🏎️
-The Fischertechnik Maker Kit Car is a pre-assembled chassis that provides a solid foundation for creating functional models or prototypes of vehicles. It includes essential components such as wheels, motors, axles, and structural elements that allow users to build a stable base for their projects. The kit is compatible with various motors, sensors, and other electronic components, making it ideal for integrating advanced functionalities like autonomous driving, obstacle avoidance, or remote control. The design is modular, enabling easy modifications and upgrades as needed. This flexibility allows users to experiment with different configurations and mechanical setups without needing to start from scratch.
-
-Kits like this are ideal for teams new to robotics because they eliminate the need for extensive mechanical assembly or 3D modeling skills. By using a pre-assembled kit, you can focus on higher-level tasks such as programming, sensor integration, and algorithm development without worrying about building the physical structure from scratch. This approach is particularly beneficial for educational purposes, as it allows students to quickly prototype ideas and test concepts without getting bogged down by mechanical complexities. Additionally, many international teams use similar kits, making it a widely accepted and practical choice for competitions like the World Robot Olympiad (WRO).
-
-![halbi](https://media.fischer.group/v7/_pim-media-prod_/Product%20Pictures/Product%20Pictures%20fischertechnik/W1_P_P_571900_CAR.jpg?trim=5&func=fit&bg_colour=fff&org_if_sml=0&w=638&h=448.875)
-
-While pre-assembled kits offer convenience, designing and 3D-printing your own chassis provides several advantages. First, custom chassis designs allow for greater flexibility and optimization, enabling you to tailor the vehicle to specific requirements such as weight distribution, component placement, and cost-efficiency. A well-designed custom chassis can also be more durable and reliable than off-the-shelf kits, which may have fragile parts that are not easily replaceable. Furthermore, creating your own chassis fosters deeper learning in mechanical engineering, CAD modeling, and prototyping—skills that are highly valued in robotics and engineering competitions. While it requires more time and technical expertise upfront, the ability to iterate and refine your design based on testing results leads to a more robust and competitive robot. Ultimately, while pre-assembled kits are great for getting started, building your own chassis offers superior customization, cost savings, and educational value, making it the preferred choice for advanced teams aiming to push the boundaries of innovation in the WRO FE category.
-
----
-### Li-on 18650 Batteries, LX-2BUPS MT3068 🔋
-
-The robot uses two 18650 Li-ion batteries  combined with an LX-2BUPS MT3068 power management module , which allows the system to function without complex circuitry or custom-built charging solutions. This setup provides a stable power source for both the Raspberry Pi and motor driver, making it suitable for teams without advanced electronics experience. The LX-2BUPS module acts as a UPS (uninterruptible power supply), ensuring smooth transitions between charging and discharging states. However, this configuration has some limitations: the 18650 batteries are relatively large, making space management within the chassis challenging. Additionally, these batteries have limited runtime when powering high-consumption components like the Raspberry Pi, especially during intensive tasks such as image processing. 
-
-To address voltage requirements for the motors, we included a step-up module to boost the output to 11.24V , allowing the motors to operate at optimal speed. While this setup works well for basic operation, it lacks a Battery Management System (BMS) , meaning there’s no automatic balancing of charge between the two batteries. As a result, one battery may discharge faster than the other, potentially leading to unstable power delivery or overheating. Despite its drawbacks, this energy solution was chosen because our team lacked the expertise to design and implement a more advanced Li-Po-based system from scratch. It serves as a functional starting point that enables us to focus on software and sensor integration while preparing for future improvements through custom-designed power circuits. 
-
-![LX2-BUSB](https://ndft.com.ua/wp-content/uploads/2024/02/ups18650-9v-1.6a-lx-2bups-01-600x600.jpg)
-
-![mt3068](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn1Sv7f9wSsHRTk7usT8XIPjlM8y--4sjbYA&s)
-
----
-### Arduino nano
-For our autonomous vehicle project, we chose the Arduino Nano with USB-C  as the primary microcontroller to handle sensor inputs, motor control, and coordination with the main Single-Board Computer (SBC), such as a Raspberry Pi. This decision was driven by both practical and ergonomic considerations—primarily, our team’s preference for the USB-C interface , which offers better durability, faster data transfer, and reversible plug orientation compared to older micro-USB connectors. 
-
-While the Arduino Nano (USB-C version) is not strictly required for this project, its compact size, wide community support, and compatibility with the Firmata2 protocol  made it a natural fit for rapid prototyping and integration with Python-based control logic running on the SBC. 
-![nano](https://www.universal-solder.ca/wp-content/uploads/2025/01/canaduino-arduino-nano-v3-ch340-USB-C-3.jpg.webp)
-
----
-### L298n
-The L298N H-Bridge module  is a dual motor driver commonly used in robotics to control the direction and speed of DC motors. It allows bidirectional motor control using Pulse Width Modulation (PWM) signals from microcontrollers like Arduino or Raspberry Pi. This makes it ideal for basic robotic platforms where simplicity and ease of use are prioritized over high efficiency. 
-
-While the L298N is user-friendly and widely available, it has some limitations such as high voltage drop  (around 1.5V–3V per motor), which reduces the effective voltage delivered to the motors. This can affect performance, especially when using lower-voltage batteries. Additionally, it tends to generate significant heat , often requiring heatsinks or cooling solutions during prolonged operation. We don't opt for more efficient drivers like the DRV8833  or TB6612 , which offer better energy efficiency and thermal performance because find or deliver those drivers for Venezuela is very hard. However, for early development and testing, the L298N remains a solid choice due to its ease of integration and widespread community support.
-
-![L298N](https://http2.mlstatic.com/D_NQ_NP_832041-MLV73442990809_122023-O.webp)
-
----
-## Wiring Diagram
-This is the the wiring diagram to assemble your own Dark Halbi! 
-Remember to buy every component before start building
-
-![cables](src/Wiring_diagram.png)
-
-## Mobyility management 
-
-### Chasis
+## Our prototype
 At first, we planned to design the car from scratch, modeling and printing our own 3D pieces, including the chassis and direction, Although it seemed like a good idea at first, as we progressed we started to face problem after problem, we realized that our current design would give us more problems, at the end we tried our best with the time constraints we had, and this was the vehicle we presented at WRO 2024, Cybercooper.
 
-![cybercooper](v-photos/old_right.jpg)
+![cybercooper](./v-photos/old_right.jpg)
 
-To test new ways to achive the goal and win the competition, with that in mind after a lot investigation watching videos, others teams repositoried we choose the Maker kit car wich we described earlier, and after testing we could notice this about our election
+### Chasis
 
-- The chassis have many fragile parts
-- Have a deviation on the direction because the wheels oscillate 
-- The wheels axis are made from plastic so if you put much weight it will broke 
-
-So if you're starting we recommend it but we determine is better inversion to model your own chasis 
 
 ### Desing
 
 As the kit is made of parts like lego we just design pieces to be compatible with the chassis, after we designed the pieces we fixed the components with screw/glue. But our inspiration it continues being the Cybertruck of tesla. We have many goals and we are excited about the future because each year we get better and develop betters solutions.
 ![Cybertruck](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8swiJgrYVAy5-1sr-J3byiYGwJpsY0s9R5Q&s)
 
-In other aspects like direction, the kit use an simple Ackerman direction powered by a servo with 1.8kgcm standing torque, said direction is a geometric design principle used in vehicles to ensure that both front wheels turn at different angles when making a turn, allowing the vehicle to move smoothly around corners without skidding. This system uses a linkage setup that enables the inner wheel to turn sharper than the outer wheel, following the natural arc of the turn. In the Fischertechnik Maker Kit Car , the Ackermann steering mechanism is implemented using a set of tie rods connected to the front wheels. [We recommed this video to learn more about it](https://www.youtube.com/watch?v=hsQO5C0adQk)
-
-While the propulsion is made by a mechanism called "diferential" wich works
+In other aspects like direction, 
 ### Motors 
 
 The kit brings with the servo motor and the propulsion motor wich powerup the car to run 
