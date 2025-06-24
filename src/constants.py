@@ -25,7 +25,9 @@ SERVO_PIN = 9
 
 RIGHT = 0
 LEFT = 180
-CENTER = 90
+
+CENTER = 84
+
 
 # LEDS PINS
 LED_YELLOW = 7
@@ -55,23 +57,25 @@ GREEN_TARGET = 530
 #OPEN_ROI_RIGHT = ROI(1280 - 100, 0, 1280, 720)
 CENTER_X = int(640 / 2)
 CENTER_Y = int(480 / 2) + 30
-OPEN_ROI_CENTER = ROI(CENTER_X - 150,CENTER_Y - 50,CENTER_X + 150,450)
+OPEN_ROI_CENTER = ROI(CENTER_X - 120,CENTER_Y - 14,CENTER_X + 120,450)
 ROI_LINES = ROI(200, 370, 440, 470)
 
+# CLosed challenge regions
+
+CLOSED_LEFT_ROI = ROI(0, CENTER_Y - 30, int(640 / 3), 480)
+
+CLOSED_RIGHT_ROI = ROI(640 - int(640 / 3), CENTER_Y - 30, 640, 480)
+
+CLOSED_CENTER_ROI = ROI(int(640 / 3), CENTER_Y - 30, 640 - int(640 / 3), 480)
+
+CLOSED_GENERAL_ROI = ROI(0, CENTER_Y - 30, 640, 480)
+
 TURN_THRESH = 30000.0
-TURN_EXIT_THRESH = 12000.0
-
-# Obstacle Challenge regions
-
-#ROI_LEFT_LANE = ROI(0, 175, 330, 265)
-#ROI_RIGHT_LANE = ROI(330, 175, 640, 265)
+TURN_EXIT_THRESH = 10400.0
 
 
-ROI_PILLARS = ROI(RED_TARGET - 50, 120, GREEN_TARGET + 50, 345)
 
-ROI_CORNERS = ROI(270, 120, 370, 140) #270, 120, 370, 140
 
-#OBSTACLE_ROI_CENTER = ROI()
 
 
 # Color masks for detecting obstacles
@@ -97,13 +101,28 @@ mask_red = [[0, 153, 140], [ 131,198, 171]]
 mask_green = [[0, 45, 0], [255, 117, 153]]
 
 mask_blue = [[54, 124, 25], [148, 164, 121]]
-mask_blue_test = [[97, 127, 88], [158, 145, 99]]
+#mask_blue_test = [[14, 135, 71], [174, 203, 240]]
+mask_blue_test = [[0, 61, 17], [114, 170, 126]]
+
 
 mask_orange = [[0, 163, 163], [255, 191, 204]]
-mask_orange_test = [[89, 132, 109], [159, 149, 134]]
+mask_orange_test = [[35, 135, 86], [175, 160, 177]]
 
 mask_black = [[0, 109, 113], [59, 137, 150]]
-mask_black_test = [[0, 0, 95], [84, 255, 122]]
+#mask_black_test = [[2, 100, 69], [79, 168, 141]]
+#mask_black_test = [[0, 58, 98], [120, 142, 126]]
+#mask_black_test = [[0, 57, 93], [123, 140, 134]]
+
+#casa jesus luz morada
+mask_black_test = [[0, 58, 17], [108, 169, 137]]
+
+
+
+
+
+
+
+
 
 
 

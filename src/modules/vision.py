@@ -22,6 +22,7 @@ class VisionController():
         self.camera_cap = cv.VideoCapture(usb_port)
         self.camera_cap.set(cv.CAP_PROP_FRAME_WIDTH, self.image_width)
         self.camera_cap.set(cv.CAP_PROP_FRAME_HEIGHT, self.image_height)
+        #self.camera_cap.set(cv.CAP_PROP_CONTRAST, 145)
 
         
 

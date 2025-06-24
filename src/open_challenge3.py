@@ -18,10 +18,12 @@ ROIS = [OPEN_ROI_CENTER, ROI_LINES]
 #    pass
 
 running = True
+loops = 0
+line_detected = False
 
 while running:
     try:
-        hal.go_forward(255)
+        hal.go_forward(0)
         #get areas and contours-----------------
         hal.vision.receive_image()
         
@@ -46,17 +48,24 @@ while running:
         
         if (black_area >= TURN_THRESH):
             hal.turn_direction()
+            if line_detected:
+                line_detected = False
             
         if (hal.turning_direction != 0):
             if (black_area <= TURN_EXIT_THRESH):
                 hal.turn_center()
+                if not line_detected:
+                    loops += 1
+                    line_detected = True
+                
 
-            
+        if (loops == 12):
+            break
 
+        print(loops)
         
         
         
-
         #DRAWING------------------------------------------------------
         #draw rois---------s
         for roi in ROIS:

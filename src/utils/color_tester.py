@@ -13,7 +13,7 @@ maskDict = {
     "magenta": [[0,0,0], [0,0,0]],
     "red": mask_red,
     "green": mask_green,
-    "blue": mask_blue,
+    "blue": mask_blue_test,
     "orange": mask_orange_test,
     "black": mask_black_test
 }

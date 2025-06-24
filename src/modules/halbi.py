@@ -75,7 +75,7 @@ class HALBI():
 
     def go_forward(self,speed: int = 255):
         self.board.set_motor_speed("MOTOR",speed)
-        self.board.led_on(LED_WHITE)
+        #self.board.led_on(LED_WHITE)
         self.board.led_off(LED_RED)
         self.board.led_off(LED_YELLOW)
         self.board.led_off(LED_GREEN)

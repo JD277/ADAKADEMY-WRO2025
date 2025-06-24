@@ -1,4 +1,5 @@
 # Hardware documentation and setup guide
+This section provides an overview of the hardware components  used in our autonomous vehicle for the WRO 2025 competition. It includes a detailed description of the electronic and mechanical parts, their specifications, and how they are integrated into the robot’s design. The goal is to document our choices clearly and technically, following the WRO 2025 requirements for engineering transparency and reproducibility. 
 
 ## Table of content
 

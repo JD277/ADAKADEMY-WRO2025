@@ -1,4 +1,4 @@
-# importing pygame module
+
 import pygame
 import halbi
 from vision import *
@@ -7,6 +7,7 @@ import cv2 as cv
 from constants import *
 
 pygame.init()
+pygame.display.init()
  
 turn_left = pygame.K_a
 turn_right = pygame.K_d
@@ -16,19 +17,22 @@ go_backward = pygame.K_s
 
 ROI_LEFT = ROI(20, 110, 260, 240)
 ROI_RIGHT = ROI(260, 110, 600, 240)
+pygame.display.set_mode((640, 480))
 
 
 
 
-display = pygame.display.set_mode((300, 300))
+#display = pygame.display.set_mode((300, 300))
 
 
-hal = halbi.HALBI("/dev/serial0", 320, 240)
+hal = halbi.HALBI("/dev/ttyUSB0",0)
 
+hal.setup_HALBI(PINS)
 
-hal.setup_HALBI()
 
 while True:
+    hal.vision.receive_image()
+    
     
     #hal.Vision.receive_image()
        
@@ -55,6 +59,7 @@ while True:
         hal.turn_right()
     
     else:
+        
         hal.turn_center()
         
     #frame = hal.Vision.frame
