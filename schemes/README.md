@@ -1,5 +1,34 @@
 # Hardware documentation and setup guide
 
+## Table of content
+
+* [List of components](#list-of-components)
+
+* [Components description](#components-description)
+  
+  *  [Raspberry PI 4 B](#raspberry-pi-4-b)
+
+  * [Fischertechnik kit](#fischertechnik-kit)
+
+  * [Li-on 18650 batteries, LX-2BUPS MT3068](#li-on-18650-batteries-lx-2bups-mt3068)
+
+  * [Arduino nano](#arduino-nano)
+
+  * [L298n](#l298n)
+
+  * [Fischertechnik Micro servo Nr. 132292](#fischertechnik-micro-servo-nr-132292)
+
+  * [Ecorder motor 9v Nr. 153422](#ecorder-motor-9v-nr-153422)
+
+  * [Logitech C920X](#logitech-c920x)
+
+* [Assembly](#assembly)
+  * [Wiring diagram](#wiring-diagram)
+  * [Power description](#power)
+  * [Drive](#drive)
+  * [3D desing proccess and assembly](#3d-desing-proccess-and-assembly)
+
+* [Recommendations for future fevelopment](#recommendations-for-future-development)
 ## List of components
 
 | Cantidad | Producto               | Precio Unitario | Total |
@@ -21,16 +50,33 @@
 
 ## Components description
 
-### Raspberry PI 4 B 🚀 
+### Raspberry PI 4 B  
 
 The Raspberry Pi 4 Model B  is a powerful, credit-card-sized single-board computer (SBC)  developed by the Raspberry Pi Foundation. It is widely used in robotics, IoT projects, and embedded systems due to its versatility, performance, and affordability. 
 
 ![Raspberry](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR97vGNS_Bob3FpycF1ZooG3lmox1eXxC0DyA&s)
 
-Our strategy is centered on computer vision algorithms developed by us using **[Opencv](https://opencv.org/)** with python, for that reason we have choose this computer given that have a low electrcity consumption (5v 3A) contrary to the pi 5 (5V 5A 😬 To high!) besides is better option that the pi 3 B that we used the last time
+Our strategy is centered on computer vision algorithms developed by us using **[Opencv](https://opencv.org/)** with python, for that reason we have choose this computer given that have a low electrcity consumption (5v 3A) contrary to the pi 5 (5V 5A 😬 To high!) besides is better option that the pi 3 B that we used the last time.
+
+These are the features of our raspberry PI 4:
+
+
+| Feature | Description |
+|--------|-------------|
+| **Type** | Single-Board Computer (SBC) |
+| **Processor** | Quad-core Cortex-A72 (ARM v8) @ 1.5GHz |
+| **Memory (RAM)** | 8GB |
+| **Storage** | microSD card slot |
+| **Connectivity** | Wi-Fi 802.11ac (2.4 GHz / 5 GHz), Bluetooth 5.0, Ethernet |
+| **USB Ports** | 2 x USB 3.0, 2 x USB 2.0  |
+| **Video Output** | 2 x micro-HDMI ports supporting up to 4K resolution |
+| **Camera Support** | MIPI CSI camera interface |
+| **GPIO Pins** | 40-pin GPIO header (supports I²C, SPI, UART, PWM) |
+| **Operating System** | Raspberry Pi OS |
+| **Power Supply** | 5V / 3A via USB-C port |
 
 ---
-### Fischertechnik kit 🏎️
+### Fischertechnik kit 
 The Fischertechnik Maker Kit Car is a pre-assembled chassis that provides a solid foundation for creating functional models or prototypes of vehicles. It includes essential components such as wheels, motors, axles, and structural elements that allow users to build a stable base for their projects. The kit is compatible with various motors, sensors, and other electronic components, making it ideal for integrating advanced functionalities like autonomous driving, obstacle avoidance, or remote control. The design is modular, enabling easy modifications and upgrades as needed. This flexibility allows users to experiment with different configurations and mechanical setups without needing to start from scratch.
 
 Kits like this are ideal for teams new to robotics because they eliminate the need for extensive mechanical assembly or 3D modeling skills. By using a pre-assembled kit, you can focus on higher-level tasks such as programming, sensor integration, and algorithm development without worrying about building the physical structure from scratch. This approach is particularly beneficial for educational purposes, as it allows students to quickly prototype ideas and test concepts without getting bogged down by mechanical complexities. Additionally, many international teams use similar kits, making it a widely accepted and practical choice for competitions like the World Robot Olympiad (WRO).
@@ -40,7 +86,7 @@ Kits like this are ideal for teams new to robotics because they eliminate the ne
 While pre-assembled kits offer convenience, designing and 3D-printing your own chassis provides several advantages. First, custom chassis designs allow for greater flexibility and optimization, enabling you to tailor the vehicle to specific requirements such as weight distribution, component placement, and cost-efficiency. A well-designed custom chassis can also be more durable and reliable than off-the-shelf kits, which may have fragile parts that are not easily replaceable. Furthermore, creating your own chassis fosters deeper learning in mechanical engineering, CAD modeling, and prototyping—skills that are highly valued in robotics and engineering competitions. While it requires more time and technical expertise upfront, the ability to iterate and refine your design based on testing results leads to a more robust and competitive robot. Ultimately, while pre-assembled kits are great for getting started, building your own chassis offers superior customization, cost savings, and educational value, making it the preferred choice for advanced teams aiming to push the boundaries of innovation in the WRO FE category.
 
 ---
-### Li-on 18650 Batteries, LX-2BUPS MT3068 🔋
+### Li-on 18650 batteries, LX-2BUPS MT3068
 
 The robot uses two 18650 Li-ion batteries  combined with an LX-2BUPS MT3068 power management module , which allows the system to function without complex circuitry or custom-built charging solutions. This setup provides a stable power source for both the Raspberry Pi and motor driver, making it suitable for teams without advanced electronics experience. The LX-2BUPS module acts as a UPS (uninterruptible power supply), ensuring smooth transitions between charging and discharging states. However, this configuration has some limitations: the 18650 batteries are relatively large, making space management within the chassis challenging. Additionally, these batteries have limited runtime when powering high-consumption components like the Raspberry Pi, especially during intensive tasks such as image processing. 
 
@@ -58,6 +104,22 @@ While the Arduino Nano (USB-C version) is not strictly required for this project
 
 ![nano](https://www.universal-solder.ca/wp-content/uploads/2025/01/canaduino-arduino-nano-v3-ch340-USB-C-3.jpg.webp)
 
+this are some features from our arduino :
+| Feature | Description |
+|--------|-------------|
+| **Type** | Microcontroller board |
+| **Microcontroller** | ATmega328P (Nano v3) |
+| **Clock Speed** | 16 MHz |
+| **Flash Memory** | 32 KB (0.5 KB used by bootloader) |
+| **SRAM** | 2 KB |
+| **EEPROM** | 1 KB |
+| **Digital I/O Pins** | 14 (of which 6 provide PWM output) |
+| **Analog Input Pins** | 8 channels with 10-bit resolution |
+| **Power Supply** | 5V regulated input |
+| **Input Voltage (recommended)** | 7–12V |
+| **Current Draw (typical)** | ~20 mA |
+| **Communication Interfaces** | UART, SPI, I²C |
+| **Programming Language** | C/C++ using Arduino IDE or PlatformIO |
 ---
 ### L298n
 The L298N H-Bridge module  is a dual motor driver commonly used in robotics to control the direction and speed of DC motors. It allows bidirectional motor control using Pulse Width Modulation (PWM) signals from microcontrollers like Arduino or Raspberry Pi. This makes it ideal for basic robotic platforms where simplicity and ease of use are prioritized over high efficiency. 
@@ -67,7 +129,7 @@ While the L298N is user-friendly and widely available, it has some limitations s
 ![L298N](https://http2.mlstatic.com/D_NQ_NP_832041-MLV73442990809_122023-O.webp)
 
 ---
-### Fischertechnik Micro servo Nr. 132292
+### Fischertechnik micro servo Nr. 132292
 A servomotor  (or servo) is a type of motor commonly used in robotics, automation, and control applications where precise angular positioning  is required. Unlike regular DC motors that rotate continuously, servos are designed to move to a specific angle and hold that position until instructed otherwise.
 
 A standard **servomotor** consists of:
@@ -105,7 +167,6 @@ This makes servos ideal for our ackerman direction. Here are some features from 
 ![Servo](https://media.fischer.group/v7/_pim-media-prod_/Product%20Pictures/Product%20Pictures%20fischertechnik/W1_P_P_132292-MICRO-SERVO-4-8-6-V.jpg)
 
 **NOTE:** You can use other servo if you can adapt it to the kit but you don't have to use exact the same 
-
 ### Ecorder motor 9v Nr. 153422
 
 An **encoder motor** is a DC motor equipped with an **integrated encoder**, which allows for **precise measurement of rotation speed, direction, and position**. This feedback makes it ideal for applications that require accurate motion control, such as autonomous navigation, distance estimation, or path correction. The encoder generates electrical pulses as the motor shaft rotates, and by counting these pulses, the robot can determine how far it has traveled or how fast it is moving, but we're only using the motor wihtout sensing the position of the motor.
@@ -129,22 +190,7 @@ Here are the motors features:
 
 ![Encorder](https://media.fischer.group/v7/_pim-media-prod_/Product%20Pictures/Product%20Pictures%20fischertechnik/W1_P_P_153422-ENCODERMOTOR-9V.jpg)
 
-
-### Logitech camera C920X 
-The Logitech C920X  is a high-definition USB webcam designed for video conferencing, streaming, and general-purpose imaging applications. It features a 1080p HD sensor  with autofocus, built-in microphone array, and compatibility with most operating systems, making it a versatile vision sensor for robotics projects. 
-
-In our autonomous vehicle setup, we use the C920X as the primary camera  for visual perception tasks such as: 
-
-- Line detection (blue and orange lines)
-- Obstacle avoidance
-- Traffic sign recognition
-- Parking alignment using color-based segmentation
-     
-Certainly! Here's a **professional and informative description** of the **Logitech C920X USB Camera**, suitable for including in your `README.md` file or documentation for the WRO 2025 Futuros Ingenieros category. This description aligns with the competition’s technical requirements, particularly regarding sensor use (Rule 11.11), and highlights its value for autonomous navigation tasks.
-
----
-
-### 📷 Logitech C920X – Description
+### Logitech C920X
 
 The **Logitech C920X** is a high-definition USB webcam designed for video conferencing, streaming, and general-purpose imaging applications. It features a **1080p HD sensor** with autofocus, built-in microphone array, and compatibility with most operating systems, making it a versatile vision sensor for robotics projects.
 
@@ -172,7 +218,7 @@ Thanks to its **UVC (USB Video Class)** compliance, the C920X can be used direct
 Although not originally designed for robotics, the C920X has become a popular choice among teams due to its affordability, reliability, and ease of integration with Single Board Computers (SBCs) like **Raspberry Pi**.
 
 ---
-#### 🚫 Limitations to Consider
+#### 🚫 Limitations
 
 - **Fixed Focus:** While it has autofocus, lighting conditions affect performance significantly.
 - **No Hardware Trigger:** Not ideal for synchronized sensor fusion but acceptable for basic vision tasks.
@@ -203,7 +249,7 @@ For the assembly we are gone supose that you have follow the assamble insruction
 
 ---
 
-### Wiring Diagram
+### Wiring diagram
 
 Remember to buy every component before start building
 
@@ -256,15 +302,21 @@ In our case we fixed the switchs with industrial glue but you can do some 3d pri
 
 ![up](../v-photos/up.jpg)
 
-As a recomendation for you we suggest two model your own PCB and fit every component in your board, and use a lipo battery with its own charger because that will help to reduce the size and protect the components, that is our goal for the next year!
+## Recommendations for future development  
 
-Another recomendation is to do a deep investigation for everything to avoid loses and unnecesary buys.
+As a recommendation for other teams, we suggest two key improvements to enhance both the performance and compactness of your autonomous vehicle: 
+
+  * Design a Custom PCB: 
+    Creating your own custom printed circuit board (PCB)  allows you to integrate all essential electronics — such as motor drivers, voltage regulators, microcontroller, and sensor interfaces — into a single, compact board tailored to your robot’s needs. This not only reduces the overall size but also improves reliability by minimizing loose connections and simplifying wiring. 
+
+  * Use a LiPo Battery with Dedicated Charger: 
+    Replacing standard battery packs with a LiPo (Lithium Polymer) battery  and using a dedicated charging circuit can significantly reduce weight and space usage while offering better power efficiency. LiPo batteries provide higher energy density and longer runtime, which is especially beneficial in high-drain applications like motor control and onboard computing. 
+     
+
+These are our goals for improvement in the next season, and we believe they will help us build a more efficient and competition-ready vehicle. 
+
+Additionally, we recommend conducting thorough research and planning  before purchasing components. Doing a deep investigation on each part — including compatibility, power requirements, and long-term usability — helps avoid unnecessary expenses and ensures every component contributes meaningfully to the final design. 
 
 
-## Conclusion
-
-We have difficulties to assamble Dark Halbi but we're happy with the improvements that we made from cooper.
-
-Keep moving, don't stop even when you feel you can't!
 
 
