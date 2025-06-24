@@ -46,11 +46,8 @@ So we bought the maker kit car from the german enterprise **[Fischertechnik](htt
 
 
 <div align="center">
-<video src="./video/presentation_of_Dark_halbi.mp4" width="1080" height="720" controls autoplay></video>
 
-![dark halbi](./v-photos/front.jpg)
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lOoVugvAw2w?si=2C20geMQDbBm_cfg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+![dark halbi](./v-photos/front-presentation.png)
 
 </div>
 
