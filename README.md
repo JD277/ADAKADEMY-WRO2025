@@ -9,7 +9,7 @@ This is the official Github repository for The Adakademy Team, before known as A
 * Héctor Cartagena, 18 years old, cartagenahector0608@gmail.com
 * Jesser Palma, 20 years old, jssrpalma3@gmail.com
 ---
-# 📖 Folders structure 📖
+# Folders structure 
 ```
 ADAKADEMY-WRO2025/
 ├── models/
@@ -47,8 +47,12 @@ So we bought the maker kit car from the german enterprise **[Fischertechnik](htt
 
 <div align="center">
 <video src="./video/presentation_of_Dark_halbi.mp4" width="1080" height="720" controls autoplay></video>
-</div>
 
+![dark halbi](./v-photos/front.jpg)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lOoVugvAw2w?si=2C20geMQDbBm_cfg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</div>
 
 
 As the kit is made of parts like lego we just design pieces to be compatible with the chassis, after we designed the pieces we fixed the components with screw/glue/Double-side tape. But our inspiration it continues being the Cybertruck of tesla. We have many goals and we are excited about the future because each year we get better to bring betters solutions.
@@ -60,22 +64,12 @@ As the kit is made of parts like lego we just design pieces to be compatible wit
 
 
 
-
-## Car Photos
-
-
-
-# Hardware
-
-## Components
-
-
 ## Mobility
 
-Our vehicle is made the Ackermann steering mechanism, which is a geometric configuration used in vehicle steering systems to ensure that when turning, the inner and outer wheels travel along different radii, preventing tire scrubbing and maximizing cornering stability. This is achieved by steering the front wheels at different angles, with the inner wheel turning at a greater angle than the outer wheel. And is propelled by a differential that we explain with detail here
+Our vehicle is made the [Ackermann steering mechanism](https://www.youtube.com/results?search_query=ackermann+geometry), which is a geometric  configuration used in vehicle steering systems to ensure that when turning, the inner and outer wheels travel along different radii, preventing tire scrubbing and maximizing cornering stability. This is achieved by steering the front wheels at different angles, with the inner wheel turning at a greater angle than the outer wheel. And is propelled by a differential that we explain with detail here
 
 
-# Software
+## Software
 
 We developed the software using python3 as our main programming language and using Thonny/Terminal as code editor.
 
@@ -90,14 +84,7 @@ We then use OpenCV to apply a threshold to the image, which returns a mask image
 
 ### Obstacle Detection
 
-For Obstacle detection, we specify various color ranges that coincide with the color of the obstacles, red and green. After the camera captures the image, we apply gaussian blur and median filters to get a sharper image, the program then applies thresholds to get masks with the colors we are interested in, with this mask we can detected the screen position of the obstacles and the contours of the circuit wall, which can be used to decide the turning direction of the car based on a proportional derivative (PD) algorithm, which involves calculating the differences between the area of the walls
+For Obstacle detection, we specify various color ranges that coincide with the color of the obstacles, red and green. After the camera captures the image, we apply gaussian blur and median filters to get a sharper image, the program then applies thresholds to get masks with the colors we are interested in, with this mask we can detected the screen position of the obstacles and the contours of the circuit wall, which can be used to decide the turning direction of the car based on a proportional derivative (PD) algorithm, which involves calculating the differences between the area of the walls.
 
-### Open Challenge
 
-#### 
-
-#### Steering Control
-
-### Closed Challenge
-
-#### Obstacle detection
+Looking for more? go to projects folders [Here](#folders-structure) !
