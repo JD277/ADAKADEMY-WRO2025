@@ -35,30 +35,31 @@ At first, we planned to design the car from scratch, modeling and printing our o
 
 ![cybercooper](./v-photos/old_right.jpg)
 
-## Cooper White
-
-
-### Desing
-
-As the kit is made of parts like lego we just design pieces to be compatible with the chassis, after we designed the pieces we fixed the components with screw/glue. But our inspiration it continues being the Cybertruck of tesla. We have many goals and we are excited about the future because each year we get better and develop betters solutions.
-![Cybertruck](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8swiJgrYVAy5-1sr-J3byiYGwJpsY0s9R5Q&s)
-
-In other aspects like direction, 
-### Motors 
-
-The kit brings with the servo motor and the propulsion motor wich powerup the car to run 
-
-
-
-
-
-#### Prototype
+## Dark halbi (Our current prototype)
 
 Given the resources we currently had, our main idea was to re-design Cybercooper, modifying the existing base, strategy and using better electronic components; we started printing the new parts with white material and thinking of better ways to assemble the car direction.
 
-#### Fischertechnik kit
-
 At the end, we decided to use a premade base for the chassis, the main reason for this was to save time ( and headaches) with the mechanical design, giving us more time to focus on the electronics and programming.
+
+So we bought the maker kit car from the german enterprise **[Fischertechnik](https://www.fischertechnik.de/de-de/produkte/maker/571900-maker-kit-car)**, now we present a more profesional approach with a better documentation and totally new code sctucture,
+
+
+
+<div align="center">
+<video src="./video/presentation_of_Dark_halbi.mp4" width="1080" height="720" controls autoplay></video>
+</div>
+
+
+
+As the kit is made of parts like lego we just design pieces to be compatible with the chassis, after we designed the pieces we fixed the components with screw/glue/Double-side tape. But our inspiration it continues being the Cybertruck of tesla. We have many goals and we are excited about the future because each year we get better to bring betters solutions.
+
+<div align="center">
+
+![Cybertruck](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8swiJgrYVAy5-1sr-J3byiYGwJpsY0s9R5Q&s)
+</div>
+
+
+
 
 ## Car Photos
 
@@ -71,9 +72,8 @@ At the end, we decided to use a premade base for the chassis, the main reason fo
 
 ## Mobility
 
-Our vehicle is made the Ackermann steering mechanism, which is a geometric configuration used in vehicle steering systems to ensure that when turning, the inner and outer wheels travel along different radii, preventing tire scrubbing and maximizing cornering stability. This is achieved by steering the front wheels at different angles, with the inner wheel turning at a greater angle than the outer whee
+Our vehicle is made the Ackermann steering mechanism, which is a geometric configuration used in vehicle steering systems to ensure that when turning, the inner and outer wheels travel along different radii, preventing tire scrubbing and maximizing cornering stability. This is achieved by steering the front wheels at different angles, with the inner wheel turning at a greater angle than the outer wheel. And is propelled by a differential that we explain with detail here
 
-## Power and Sense Management
 
 # Software
 
@@ -88,7 +88,7 @@ We use the raspberry camera to capture the image, which is converted from BGR fo
 We then use OpenCV to apply a threshold to the image, which returns a mask image with the pixels that reside within the specified color range, we can also reduce processing time by only searching within a specific region of interest on the screen.
 
 
-###Obstacle Detection
+### Obstacle Detection
 
 For Obstacle detection, we specify various color ranges that coincide with the color of the obstacles, red and green. After the camera captures the image, we apply gaussian blur and median filters to get a sharper image, the program then applies thresholds to get masks with the colors we are interested in, with this mask we can detected the screen position of the obstacles and the contours of the circuit wall, which can be used to decide the turning direction of the car based on a proportional derivative (PD) algorithm, which involves calculating the differences between the area of the walls
 

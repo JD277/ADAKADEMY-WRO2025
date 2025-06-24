@@ -31,7 +31,9 @@
 * [Recommendations for future fevelopment](#recommendations-for-future-development)
 ## List of components
 
-| Cantidad | Producto               | Precio Unitario | Total |
+<div align="center">
+
+| Quantity | Product               | Price| Total |
 |----------|------------------------|----------------|-------|
 | 1        | [Raspberry Pi 4 B](https://www.amazon.com/Raspberry-aleaci%C3%B3n-resistente-refrigerada-ventilador/dp/B07XTRK8D4/ref=sxin_16_pa_sp_search_thematic_sspa?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&content-id=amzn1.sym.2da95b6c-f59a-4699-bc43-d0ff036c6388%3Aamzn1.sym.2da95b6c-f59a-4699-bc43-d0ff036c6388&crid=1MNN6HXZPRQX8&cv_ct_cx=raspberry%2Bpi%2B4&keywords=raspberry%2Bpi%2B4&pd_rd_i=B07XTRK8D4&pd_rd_r=8fd6db19-a9bf-49f2-bed5-d85f62162bf9&pd_rd_w=PCH4o&pd_rd_wg=RHQgL&pf_rd_p=2da95b6c-f59a-4699-bc43-d0ff036c6388&pf_rd_r=PBJ9HR8999TXWA966P2T&qid=1749992437&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=raspberry%2Caps%2C240&sr=1-1-6024b2a3-78e4-4fed-8fed-e1613be3bcce-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1)       | $110.00        | $110.00 |
 | 1        | [Car chassis with motor and servo](https://www.amazon.com/-/es/fischertechnik-Maker-Kit-Car-571900/dp/B0CY31DGT1/ref=sr_1_1?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1U5LDJG1N012B&dib=eyJ2IjoiMSJ9.A4y-GcKAwAbaTNsidmYvDQ.2Dl1_C7M_3siNlFrrKAdwcWGiPjo24JfKghV4CarK_E&dib_tag=se&keywords=maker%2Bkit%2Bcat%2Bfischertechnik&qid=1749992612&sprefix=maker%2Bkit%2Bcat%2Bfishertecnk%2Caps%2C160&sr=8-1&th=1)            | $152.00        | $152.00 |
@@ -46,7 +48,13 @@
 | 1       | [Indications LEDs](https://www.amazon.com/-/es/MCIGICM-circuitos-experimentos-cient%C3%ADficos-multicolor/dp/B07PG84V17/ref=sr_1_1?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=34TV9PKSNPYBI&dib=eyJ2IjoiMSJ9.cK4CwVBcvXGqzlCWlCXE35U8AEF7YUYdftEfJlolABKfHDeAY4cXJaZ0g5192vPE2KHdPs3H5jQh1AK5mX9trJRurvfjsHG79EfL5JWOhmJffO7Q7Vbz23WkPxdsCxxONU2n0msMWrqzLL1VVMOmqL6fnz0uNnkdN6bg-3eseqtFNSgzCL6tJWrprDzb1ZGceXhWotxA9vxpLHfEjXE_4ni-3W4HtRW5MiANBQrV8KI.9IKBwWYKULyRvT0BDqzXIF9Se-L0Q9LRTKr_iQNFIJs&dib_tag=se&keywords=leds%2Barduino&qid=1750688479&sprefix=leds%2Barduino%2Caps%2C230&sr=8-1&th=1)     | $4          | $4.00 |
 | **Total** |                        |                | **$401.48** |
 
+</div>
+
 ---
+
+
+<div style="text-align:justify">
+
 
 ## Components description
 
@@ -54,11 +62,17 @@
 
 The Raspberry Pi 4 Model B  is a powerful, credit-card-sized single-board computer (SBC)  developed by the Raspberry Pi Foundation. It is widely used in robotics, IoT projects, and embedded systems due to its versatility, performance, and affordability. 
 
+<div align="center">
+
 ![Raspberry](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR97vGNS_Bob3FpycF1ZooG3lmox1eXxC0DyA&s)
+
+</div>
 
 Our strategy is centered on computer vision algorithms developed by us using **[Opencv](https://opencv.org/)** with python, for that reason we have choose this computer given that have a low electrcity consumption (5v 3A) contrary to the pi 5 (5V 5A 😬 To high!) besides is better option that the pi 3 B that we used the last time.
 
 These are the features of our raspberry PI 4:
+
+<div align="center">
 
 
 | Feature | Description |
@@ -75,13 +89,22 @@ These are the features of our raspberry PI 4:
 | **Operating System** | Raspberry Pi OS |
 | **Power Supply** | 5V / 3A via USB-C port |
 
+</div>
+
 ---
 ### Fischertechnik kit 
 The Fischertechnik Maker Kit Car is a pre-assembled chassis that provides a solid foundation for creating functional models or prototypes of vehicles. It includes essential components such as wheels, motors, axles, and structural elements that allow users to build a stable base for their projects. The kit is compatible with various motors, sensors, and other electronic components, making it ideal for integrating advanced functionalities like autonomous driving, obstacle avoidance, or remote control. The design is modular, enabling easy modifications and upgrades as needed. This flexibility allows users to experiment with different configurations and mechanical setups without needing to start from scratch.
 
 Kits like this are ideal for teams new to robotics because they eliminate the need for extensive mechanical assembly or 3D modeling skills. By using a pre-assembled kit, you can focus on higher-level tasks such as programming, sensor integration, and algorithm development without worrying about building the physical structure from scratch. This approach is particularly beneficial for educational purposes, as it allows students to quickly prototype ideas and test concepts without getting bogged down by mechanical complexities. Additionally, many international teams use similar kits, making it a widely accepted and practical choice for competitions like the World Robot Olympiad (WRO).
 
+<div align="center">
+
+<div style="width:290px">
+
 ![halbi](https://media.fischer.group/v7/_pim-media-prod_/Product%20Pictures/Product%20Pictures%20fischertechnik/W1_P_P_571900_CAR.jpg?trim=5&func=fit&bg_colour=fff&org_if_sml=0&w=638&h=448.875)
+
+</div>
+</div>
 
 While pre-assembled kits offer convenience, designing and 3D-printing your own chassis provides several advantages. First, custom chassis designs allow for greater flexibility and optimization, enabling you to tailor the vehicle to specific requirements such as weight distribution, component placement, and cost-efficiency. A well-designed custom chassis can also be more durable and reliable than off-the-shelf kits, which may have fragile parts that are not easily replaceable. Furthermore, creating your own chassis fosters deeper learning in mechanical engineering, CAD modeling, and prototyping—skills that are highly valued in robotics and engineering competitions. While it requires more time and technical expertise upfront, the ability to iterate and refine your design based on testing results leads to a more robust and competitive robot. Ultimately, while pre-assembled kits are great for getting started, building your own chassis offers superior customization, cost savings, and educational value, making it the preferred choice for advanced teams aiming to push the boundaries of innovation in the WRO FE category.
 
@@ -92,19 +115,25 @@ The robot uses two 18650 Li-ion batteries  combined with an LX-2BUPS MT3068 powe
 
 To address voltage requirements for the motors, we included a step-up module to boost the output to 11.24V , allowing the motors to operate at optimal speed. While this setup works well for basic operation, it lacks a Battery Management System (BMS) , meaning there’s no automatic balancing of charge between the two batteries. As a result, one battery may discharge faster than the other, potentially leading to unstable power delivery or overheating. Despite its drawbacks, this energy solution was chosen because our team lacked the expertise to design and implement a more advanced Li-Po-based system from scratch. It serves as a functional starting point that enables us to focus on software and sensor integration while preparing for future improvements through custom-designed power circuits. 
 
+<div align="center">
+
+<div style="width:290px">
+
 ![LX2-BUSB](https://ndft.com.ua/wp-content/uploads/2024/02/ups18650-9v-1.6a-lx-2bups-01-600x600.jpg)
 
 ![mt3068](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn1Sv7f9wSsHRTk7usT8XIPjlM8y--4sjbYA&s)
+
+</div>
+</div>
 
 ---
 ### Arduino nano
 For our autonomous vehicle project, we chose the Arduino Nano with USB-C  as the primary microcontroller to handle sensor inputs, motor control, and coordination with the main Single-Board Computer (SBC), such as a Raspberry Pi. This decision was driven by both practical and ergonomic considerations—primarily, our team’s preference for the USB-C interface , which offers better durability, faster data transfer, and reversible plug orientation compared to older micro-USB connectors. 
 
 While the Arduino Nano (USB-C version) is not strictly required for this project, its compact size, wide community support, and compatibility with the Firmata2 protocol  made it a natural fit for rapid prototyping and integration with Python-based control logic running on the SBC. 
-
-![nano](https://www.universal-solder.ca/wp-content/uploads/2025/01/canaduino-arduino-nano-v3-ch340-USB-C-3.jpg.webp)
-
 this are some features from our arduino :
+<div align="center">
+
 | Feature | Description |
 |--------|-------------|
 | **Type** | Microcontroller board |
@@ -120,13 +149,31 @@ this are some features from our arduino :
 | **Current Draw (typical)** | ~20 mA |
 | **Communication Interfaces** | UART, SPI, I²C |
 | **Programming Language** | C/C++ using Arduino IDE or PlatformIO |
+
+
+<div style="width:290px">
+</br>
+
+![nano](https://www.universal-solder.ca/wp-content/uploads/2025/01/canaduino-arduino-nano-v3-ch340-USB-C-3.jpg.webp)
+
+</div>
+
+</div>
+
 ---
 ### L298n
 The L298N H-Bridge module  is a dual motor driver commonly used in robotics to control the direction and speed of DC motors. It allows bidirectional motor control using Pulse Width Modulation (PWM) signals from microcontrollers like Arduino or Raspberry Pi. This makes it ideal for basic robotic platforms where simplicity and ease of use are prioritized over high efficiency. 
 
 While the L298N is user-friendly and widely available, it has some limitations such as high voltage drop  (around 1.5V–3V per motor), which reduces the effective voltage delivered to the motors. This can affect performance, especially when using lower-voltage batteries. Additionally, it tends to generate significant heat , often requiring heatsinks or cooling solutions during prolonged operation. We don't opt for more efficient drivers like the DRV8833  or TB6612 , which offer better energy efficiency and thermal performance because find or deliver those drivers for Venezuela is very hard. However, for early development and testing, the L298N remains a solid choice due to its ease of integration and widespread community support.
 
+<div align="center">
+
+<div style="width:290px">
+
 ![L298N](https://http2.mlstatic.com/D_NQ_NP_832041-MLV73442990809_122023-O.webp)
+
+</div>
+</div>
 
 ---
 ### Fischertechnik micro servo Nr. 132292
@@ -149,6 +196,9 @@ Servos receive **control signals** through Pulse Width Modulation (PWM). The wid
 
 This makes servos ideal for our ackerman direction. Here are some features from that servo:
 
+<div align="center">
+
+
 
 | Feature | Description |
 |--------|-------------|
@@ -164,14 +214,24 @@ This makes servos ideal for our ackerman direction. Here are some features from 
 | **Wire Length** | 240 mm |
 | **Plug Type** | JR Universal (Brown = GND, Red = VCC, Orange = Signal) |
 
+<div style="width:290px">
+</br>
+
 ![Servo](https://media.fischer.group/v7/_pim-media-prod_/Product%20Pictures/Product%20Pictures%20fischertechnik/W1_P_P_132292-MICRO-SERVO-4-8-6-V.jpg)
 
+</div>
+</div>
+
 **NOTE:** You can use other servo if you can adapt it to the kit but you don't have to use exact the same 
+
+---
 ### Ecorder motor 9v Nr. 153422
 
 An **encoder motor** is a DC motor equipped with an **integrated encoder**, which allows for **precise measurement of rotation speed, direction, and position**. This feedback makes it ideal for applications that require accurate motion control, such as autonomous navigation, distance estimation, or path correction. The encoder generates electrical pulses as the motor shaft rotates, and by counting these pulses, the robot can determine how far it has traveled or how fast it is moving, but we're only using the motor wihtout sensing the position of the motor.
 
 Here are the motors features:
+
+<div align="center">
 
 | Feature | Description |
 |--------|-------------|
@@ -186,10 +246,16 @@ Here are the motors features:
 | **Stall Current** | 1.3A maximum |
 
 
----
+
+<div style="width:290px">
+</br>
 
 ![Encorder](https://media.fischer.group/v7/_pim-media-prod_/Product%20Pictures/Product%20Pictures%20fischertechnik/W1_P_P_153422-ENCODERMOTOR-9V.jpg)
 
+</div>
+</div>
+
+---
 ### Logitech C920X
 
 The **Logitech C920X** is a high-definition USB webcam designed for video conferencing, streaming, and general-purpose imaging applications. It features a **1080p HD sensor** with autofocus, built-in microphone array, and compatibility with most operating systems, making it a versatile vision sensor for robotics projects.
@@ -200,8 +266,8 @@ In our autonomous vehicle setup, we use the **C920X as the primary camera** for 
 - Traffic sign recognition
 - Parking alignment using color-based segmentation
 
+<div align="center">
 
-#### 🔧 Key Features:
 
 | Feature | Specification |
 |--------|----------------|
@@ -213,11 +279,14 @@ In our autonomous vehicle setup, we use the **C920X as the primary camera** for 
 | **Mounting Options** | Clip-on or tripod mount |
 | **Field of View** | 78° diagonal field of view (ideal for line detection) |
 
+</div>
+
+
 Thanks to its **UVC (USB Video Class)** compliance, the C920X can be used directly with OpenCV and Python on platforms like Raspberry Pi without requiring special drivers. This makes it ideal for real-time image processing and autonomous decision-making in robot vehicles.
 
 Although not originally designed for robotics, the C920X has become a popular choice among teams due to its affordability, reliability, and ease of integration with Single Board Computers (SBCs) like **Raspberry Pi**.
 
----
+
 #### 🚫 Limitations
 
 - **Fixed Focus:** While it has autofocus, lighting conditions affect performance significantly.
@@ -226,7 +295,15 @@ Although not originally designed for robotics, the C920X has become a popular ch
 
 Despite these limitations, the **Logitech C920X** serves as an excellent starting point for building a functional vision system in the WRO 2025 competition.
 
+<div align="center">
+
+<div style="width:290px">
+
 ![camera](https://m.media-amazon.com/images/I/71iNwni9TsL.jpg)
+
+</div>
+</div>
+
 ---
 ## Assembly
 
@@ -241,8 +318,11 @@ So if you're starting we recommend it but we determine is better inversion to mo
 
 Leaving that aside, we decided to use a premade base for the chassis, the main reason for this was to save time ( and headaches) with the mechanical design, giving us more time to focus on the electronics and programming.
 
+<div align="center">
+
 ![car](../v-photos/front.jpg)
 
+</div>
 
 For the assembly we are gone supose that you have follow the assamble insructions of the [company](https://apps.fischer.de/ecom/fischertechnik/digitale-bauanleitungen/maker-kit-car.htm), **please take in count that maybe you will have to use glue in some parts of the kit car** beacuse the are some parts like the servo axis that are easy to remove and with the vibration it will expulse the pieces that aren't fixed pieces
 
@@ -253,7 +333,11 @@ For the assembly we are gone supose that you have follow the assamble insruction
 
 Remember to buy every component before start building
 
+<div align="center">
+
 ![cables](./Wiring_diagram.png)
+
+</div>
 
 --- 
 
@@ -280,7 +364,11 @@ the kit use an simple Ackerman direction powered by a servo with 1.8kgcm standin
 
 While the propulsion is made by a mechanism called "diferential" wich  Maker Kit includes, is a mechanical system that allows the driven wheels of the vehicle to rotate at different speeds while receiving power from the same source. This is essential for smooth turning, as it enables one wheel to move faster than the other when the vehicle corners, preventing skidding and reducing tire wear. In the context of the WRO 2025 FE category, this type of differential is typically used in rear-wheel-drive configurations where an electric motor powers both rear wheels through a shared axle. While the kit’s differential simplifies the drivetrain design and improves maneuverability, it may not be suitable for advanced autonomous driving tasks due to its mechanical limitations and potential lack of precision control compared to software-based or independent motor control.
 
+<div align="center">
+
 ![down](./down_with_rects.png)
+
+</div>
 
 ### 3D desing proccess and assembly
 
@@ -290,17 +378,29 @@ After days and a lots of headaches we find the solution to put every component.
 
 the front part of our car is essentially the [raspberry case]() elevated with [extension parts](../models/Extension%20base.3mf) desingned by our own, upper to RPI is the camera fixed with double-sided tape. The RPI is located in a way that you could use the USB ports, we choose this because we have two components that need the USB connection.
 
+<div align="center">
+
 ![car](./left_rectangles.png)
+
+</div>
 
 For the UPS modules we have model two supports that join both powersupply and hides almost every connection, the down part join the fits in the chasis of the maker kit car but before to put the modules you have to solder the switchs and the cables.
 
+<div align="center">
+
 ![ups](./lx2bups-1.jpg)
 
+</div>
+
 In our case we fixed the switchs with industrial glue but you can do some 3d print holder for it. The top part is used as base for the nano, l298n module (wich have its own base to fit in the other one), and the mt3608.
+
+<div align="center">
 
 ![ups](./lx2bups-2.jpg)
 
 ![up](../v-photos/up.jpg)
+
+</div>
 
 ## Recommendations for future development  
 
@@ -320,3 +420,4 @@ Additionally, we recommend conducting thorough research and planning  before pur
 
 
 
+<div>
