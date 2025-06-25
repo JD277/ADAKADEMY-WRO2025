@@ -397,6 +397,7 @@ We recommend to use another camera with better field of view to make easier to b
 
 ## Obstacle challenge
 ### Strategy
+
 ### Flowchart
 ### Recomendations
 
