@@ -335,19 +335,69 @@ The constructor initializes both the `VisionController` and `ArduinoController` 
 
 ## Calibration
 
+For the calibration this is the process that we suggest to make the car working properly.
+
+1. Hardware:
+
+Ensure that every components is connected like the [wire diagram](../schemes/Wiring_diagram.png) , and test if all mechanics parts are placed fine.
+
+2. Movement test:
+
+To test the movement you can use the `movement_test.py` file you just have to connect your car to one hdmi screen to start pygame correctly and excute: 
+
+```bash
+python3 -m src.utils.movement_test.py
+```
+
+And now you can use the car like an FPV car that you can control with WASD keys, if everything is working.
+**Note:** Remember to turn on the car motors 
+
+3. Mask configutation
+Now you have to calibrate the colors mask using the color tester, so you have to modify the masks that are on constants.py file, so excute, modify and test!
+
+```bash
+python3 -m src.utils.color_tester color_name
+```
+this is what should see after calibration (in this case we are using black color)
+
+<div align="center">
+
+![Color tester](../schemes/color_tester.png)
+
+</div>
+
+You must do this with every color!! And with this now you can just start to evaluate your robot for the WRO competition
 
 
 ---
 
 ## Open challenge
 ### Strategy
+
+As our car have a camera with little field of view (78°), we can't manage the internal walls because th car would enter on infinite loop of turns, so as our car is small and the direction is very accurate, the car just keep moving forward waiting to reach the a thresh with greater than 30000 black pixeles with one line (blue or orange).
+
+With this we don't have to worry about the internal walls because we will always in the outside lane.
+
 ### Flowchart
-### Explanation
+<div align="center">
+
+![Diagram](./Flowchart_1st_challenge.png)
+
+</div>
+
+So, here's how our robot makes its decisions during the competition. When we start the robot clicking the button, it first initializes all the important variables it needs to navigate—like `front_wall_area`, `blue_area`, `orange_area`, and `turning_direction`. These help it understand what’s going on around it based on camera input. Then, the robot starts moving forward, constantly scanning its surroundings using its vision system to detect colors and obstacles in real time.
+
+Now, here's where the smart part comes in. If the robot sees a big orange area, it knows it should turn right, and if it sees a big blue area, it decides to turn left—but only if it hasn’t already chosen a direction. It also keeps track of how many lines or segments it has passed using the `number_lines` counter. When it detects a wall directly in front of it beyond a certain threshold, it turns accordingly. But if the obstacle disappears, it just goes straight again. This helps the robot react dynamically to the environment without needing exact pre-programmed paths.
+
+And finally, once the robot completes 24 line crossings, which means it’s finished navigating the full course, it stops automatically. This whole process lets our robot make decisions on the fly, adapting to the track while staying fast and efficient—super.
+
 ### Recomendations
+
+We recommend to use another camera with better field of view to make easier to build betters the ROIs to manage every case, because if our car for anything turns bad it could go straight to the wall. 
+
 ## Obstacle challenge
 ### Strategy
 ### Flowchart
-### Explanation
 ### Recomendations
 
 </div>
