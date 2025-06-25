@@ -1,10 +1,10 @@
 
 import pygame
-import halbi
-from vision import *
+import src.modules.halbi
+from src.modules.vision import *
 import sys
 import cv2 as cv
-from constants import *
+from src.constants import *
 
 pygame.init()
 pygame.display.init()

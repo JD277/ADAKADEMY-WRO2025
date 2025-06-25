@@ -1,9 +1,8 @@
-from halbi import *
+from modules.halbi import *
 import atexit
 import traceback
 from constants import *
 import time
-
 #start 
 hal = HALBI("/dev/ttyUSB0", 0)
 hal.setup_HALBI(PINS)

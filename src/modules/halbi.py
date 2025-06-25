@@ -1,6 +1,6 @@
-from vision import *
-from board  import *
-from constants import *
+from src.modules.vision import *
+from src.modules.board  import *
+from src.constants import *
 
 class HALBI():
     """

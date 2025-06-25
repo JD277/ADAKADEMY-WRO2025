@@ -1,8 +1,6 @@
 import cv2 as cv
 import numpy as np
-from constants import *
-
-
+from src.constants import *
 
 class VisionController():
     """
@@ -126,49 +124,3 @@ class VisionController():
         return 	[max_area, max_x, max_y, max_cnt]
     
     
-if __name__ == "__main__":
-    from halbi import *
-
-
-    ROIs = [OPEN_ROI_LINES]
-    
-    turnThresh = 150
-    exitThresh = 1500
-    
-    
-    visionc = VisionController(0)
-    leftArea = 0
-    rightArea = 0
-    
-    leftTurn = False
-    rightTurn = False
-
-    while (1):
-    
-            visionc.receive_image()
-    
-            
-            # contornos paredes negras
-            cnt_lines_blue = visionc.find_contours(mask_blue, OPEN_ROI_LINES)
-            cnt_lines_orange = visionc.find_contours(mask_orange, OPEN_ROI_LINES)
-            
-            
-            
-            
-        
-            visionc.draw_contours(cnt_lines_blue, OPEN_ROI_LINES, (255,0,255))
-
-            
-                
-            
-            for roi in ROIs:
-                visionc.draw_roi(roi)
-
-            
-            cv.imshow("frame", visionc.frame)
-            
-            if cv.waitKey(1) == ord('q'):
-                break
-        
-
-    cv.destroyAllWindows()

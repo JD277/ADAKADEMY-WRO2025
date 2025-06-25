@@ -1,6 +1,6 @@
 import time
 import pyfirmata2
-from constants import *
+from src.constants import *
 
 class ArduinoController:
     def __init__(self, port=None):
