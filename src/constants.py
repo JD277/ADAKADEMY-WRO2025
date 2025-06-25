@@ -116,6 +116,10 @@ mask_black = [[0, 109, 113], [59, 137, 150]]
 #casa jesus luz morada
 mask_black_test = [[0, 58, 17], [108, 169, 137]]
 
+# mascara de maremare 
+#naranja [[70, 135, 86], [175, 160, 177]]
+#mask_blue_test = [[41, 58, 12], [141, 163, 121]]
+#mask_black_test = [[19, 50, 22], [129, 142, 142]]
 
 
 

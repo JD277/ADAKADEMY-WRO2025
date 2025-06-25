@@ -84,7 +84,7 @@ def on_high_B_thresh_trackbar(val):
     high_B = max(high_B, low_B+1)
     cv.setTrackbarPos(high_B_name, window_detection_name, high_B)
 
-cap = cv.VideoCapture(0)
+cap = cv.VideoCapture(2)
 ## [window]
 cv.namedWindow(window_capture_name)
 cv.namedWindow(window_detection_name)

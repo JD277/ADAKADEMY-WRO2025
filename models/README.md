@@ -3,10 +3,9 @@
 - Lower Chasis
 - Direction
 ## Fischertechnik kit
-- Battery base
-- Base hw-095
-- Top base
-- Clip union
+- LX-2BUPS down base
+- L298n Base
+- Top Base
 - Base extension
 
 
