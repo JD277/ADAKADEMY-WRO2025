@@ -5,3 +5,5 @@ This directory must contain 2 photos of the team (an official one and one funny 
 
 # Funny pic
 ![pic](./funny-pic.jpg)
+# Team pic
+![pic](./t_photo.jpg)
