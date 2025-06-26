@@ -396,9 +396,40 @@ And finally, once the robot completes 24 line crossings, which means it’s fini
 We recommend to use another camera with better field of view to make easier to build betters the ROIs to manage every case, because if our car for anything turns bad it could go straight to the wall. 
 
 ## Obstacle challenge
+
 ### Strategy
 
+In this year’s WRO challenge, our robot uses a combination of color detection and obstacle avoidance to navigate the course efficiently. The main idea is that if there are no obstacles, the robot keeps moving forward just like in the previous challenge , following lines and turning based on blue and orange regions detected by the camera. However, when an obstacle is detected , the robot must make smart decisions depending on the color of the obstacle  and its position relative to the robot .
+
+f the robot detects a red obstacle : 
+
+    And it’s on the right side , the robot turns left  to avoid it.
+    But if the red obstacle is on the left side , the robot simply moves forward , assuming it can safely pass on the right.
+     
+
+When a green obstacle  is detected: 
+
+    If it’s on the right side , the robot turns right  to go around it.
+    If it’s on the left side , the robot again moves forward , expecting a clear path to the right.
+     
+
+This logic allows the robot to dynamically adjust its path while staying within the boundaries of the track. By combining line-following behavior with intelligent obstacle avoidance based on color and position, our robot can complete the course smoothly and efficiently—just what we need for a strong performance in the WRO competition! 
+
 ### Flowchart
+
+<div align="center">
+
+![2nd challenge](./Flowchart_2nd_challenge.png)
+
+</div>
+
+The robot begins by initializing key variables like `front_wall_area`, `blue_area`, `orange_area`, `turning_direction`, and `obstacle_detected` to help interpret its surroundings using sensor data. It then starts moving forward while continuously scanning for colors and obstacles. If it detects a significant orange area, it sets the turning direction to right, or left for blue—only if no direction was previously set. The robot also checks for red or green obstacles and decides the best way to avoid them by adjusting its turning direction accordingly.
+
+As it navigates, the robot keeps track of how many lines or segments it has passed using the `number_lines` counter. When it senses a wall directly ahead beyond a certain threshold, it follows the chosen turning direction. Once it clears the obstacle, it continues straight again. This process repeats until it completes 24 line crossings, signaling the end of the course. This logic allows the robot to react quickly and efficiently to its environment, making real-time decisions that are crucial for success.
+
 ### Recomendations
 
+A key recommendation we’d give to other teams competing in WRO is to invest time and effort into using a camera with computer vision (CV)  rather than relying solely on basic color sensors. While simple sensors can detect colors, they only give limited information — usually from a very small area and without any idea of position or size. In contrast, a camera allows you to detect not just what color is present, but also where  it is located and how much space it occupies in the frame. This makes your robot capable of distinguishing between obstacles on the left or right side, identifying which way to turn safely, and even ignoring small reflections or false readings that might confuse a basic sensor. 
+
+Using computer vision also gives your robot more flexibility in handling complex tasks like avoiding red or green obstacles based on their position, as seen in this year’s challenge. With a camera, you can divide the image into regions of interest (like left, center, and right), process multiple colors at once, and make smarter navigation decisions in real time. Additionally, detecting the size of the color area  helps avoid unnecessary reactions to small patches or lighting noise, making your system more stable and reliable. When combined with other sensors like ultrasonic or infrared for distance measurement, CV creates a powerful perception system that allows your robot to move confidently through the course, even under varying conditions. 
 </div>
