@@ -8,7 +8,7 @@
 - Top Base
 - Base extension
 - Raspberry4_Base
-- wheel nut.3mf
+- wheel nut
 
 
 # Overview
