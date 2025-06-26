@@ -309,7 +309,7 @@ Despite these limitations, the **Logitech C920X** serves as an excellent startin
 ## Assembly
 
 
-To test new ways to achive the goal and win the competition, we make a lot of investigation watching videos, others teams repositories we choose the [Maker kit car from Fischertechnik](https://www.fischertechnik.de/de-de/produkte/maker/571900-maker-kit-car) , and after testing we could notice this about our election:
+To test new ways to achieve the goal and win the competition, we make a lot of investigation watching videos, others teams repositories we choose the [Maker kit car from Fischertechnik](https://www.fischertechnik.de/de-de/produkte/maker/571900-maker-kit-car) , and after testing we could notice this about our election:
 
 - The chassis have many fragile parts.
 - Have a deviation on the direction because the wheels oscillate. 
@@ -325,7 +325,7 @@ Leaving that aside, we decided to use a premade base for the chassis, the main r
 
 </div>
 
-For the assembly we are gone supose that you have follow the assamble insructions of the [company](https://apps.fischer.de/ecom/fischertechnik/digitale-bauanleitungen/maker-kit-car.htm), **please take in count that maybe you will have to use glue in some parts of the kit car** beacuse the are some parts like the servo axis that are easy to remove and with the vibration it will expulse the pieces that aren't fixed pieces
+For the assembly we are gone suppose that you have follow the assemble instructions of the [company](https://apps.fischer.de/ecom/fischertechnik/digitale-bauanleitungen/maker-kit-car.htm), **please take in count that maybe you will have to use glue in some parts of the kit car** because the are some parts like the servo axis that are easy to remove and with the vibration it will expulse the pieces that aren't fixed pieces
 
 
 ---
@@ -361,7 +361,7 @@ A short explanation of the power supply hierarchy of the robot
 
 ### Drive
 
-the kit use an simple Ackerman direction powered by a servo with 1.8kgcm standing torque, said direction is a geometric design principle used in vehicles to ensure that both front wheels turn at different angles when making a turn, allowing the vehicle to move smoothly around corners without skidding. This system uses a linkage setup that enables the inner wheel to turn sharper than the outer wheel, following the natural arc of the turn. In the Fischertechnik Maker Kit Car , the Ackermann steering mechanism is implemented using a set of tie rods connected to the front wheels. [We recommed this video to learn more about it](https://www.youtube.com/watch?v=hsQO5C0adQk)
+The kit use an simple Ackerman direction powered by a servo with 1.8kgcm standing torque, said direction is a geometric design principle used in vehicles to ensure that both front wheels turn at different angles when making a turn, allowing the vehicle to move smoothly around corners without skidding. This system uses a linkage setup that enables the inner wheel to turn sharper than the outer wheel, following the natural arc of the turn. In the Fischertechnik Maker Kit Car , the Ackermann steering mechanism is implemented using a set of tie rods connected to the front wheels. [We recommed this video to learn more about it](https://www.youtube.com/watch?v=hsQO5C0adQk)
 
 While the propulsion is made by a mechanism called "diferential" wich  Maker Kit includes, is a mechanical system that allows the driven wheels of the vehicle to rotate at different speeds while receiving power from the same source. This is essential for smooth turning, as it enables one wheel to move faster than the other when the vehicle corners, preventing skidding and reducing tire wear. In the context of the WRO 2025 FE category, this type of differential is typically used in rear-wheel-drive configurations where an electric motor powers both rear wheels through a shared axle. While the kit’s differential simplifies the drivetrain design and improves maneuverability, it may not be suitable for advanced autonomous driving tasks due to its mechanical limitations and potential lack of precision control compared to software-based or independent motor control.
 
