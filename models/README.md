@@ -7,6 +7,8 @@
 - L298n Base
 - Top Base
 - Base extension
+- Raspberry4_Base
+- wheel nut.3mf
 
 
 # Overview
@@ -26,18 +28,20 @@ In this file will be the explanation of the models used for the proyect
 The models files are organized with this order:
 ```
 ADAKADEMY-WRO2025/models/
-├── Base de baterias.3mf
-├── Base l298n.3mf
-├── Base superior.3mf
-├── Clip union.3mf
-└── Extension base.3mf
+├── LX-2BUPS_Down_Base.3mf
+├── L298N_Base.3mf
+├── Top_Base.3mf
+├── Wheel_nut.3mf
+├── Raspberry4_Base.3mf
+└── Base_Extension.3mf
 ```
 Where:
 
-- `/Base de baterias.3mf`: Model used to connect the LX-2BUPS module to the chassis
-- `/Base l298n.3mf`: Model used to connect the l298n module to the chassis
-- `/Base superior.3mf`: Top extension model to connect more modules to the chassis
-- `/Clip union.3mf`: Clip to connect the model extension 
-- `/Extension base.3mf`: Extension model to increase the height of components by 10 mm
+- `/LX-2BUPS_Down_Base.3mf`: Model used to connect the LX-2BUPS module to the chassis
+- `/L298N_Base.3mf`: Model used to connect the l298n module to the chassis
+- `/Top_Base.3mf`: Top extension model to connect more modules to the chassis
+- `/Wheel_nut.3mf`: Nut to adjust the wheels to the axle
+- `/Raspberry4_Base.3mf`: Models to connect and protect the Raspberry 4 Model B to the chassis
+- `/Base_Extension.3mf`: Extension model to increase the height of components by 10 mm
 
 
